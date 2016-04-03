@@ -2,22 +2,54 @@
 layout: default
 ---
 
-<div class="home">
+<div id="main-body">
+    <div class="visible-sm-block visible-xs-block banner-box text-center">
+        HeyCommunity <br>
+        DEMO: <a href="http://demo.hey-community.cn">demo.hey-community.cn</a>
+    </div>
+    <div class="container-fluid">
+        <div class="row row-1">
+            <div class="col-md-6 hidden-sm hidden-xs">
+                <div class="phone-box">
+                    <iframe src="http://demo.hey-community.cn"></iframe>
+                </div>
+            </div>
 
-  <h1 class="page-heading">Posts</h1>
+            <div class="col-md-6">
+                <div class="panel panel-default panel-new-tenant">
+                    <div class="panel-heading">
+                        HeyCommunity
+                    </div>
+                    <div class="panel-body">
+                        Coming soon
+                    </div>
+                </div>
+            </div>
+        </div>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <div class="row" style="margin-bottom:10px;">
+            <div class="col-xs-12 hidden-sm hidden-xs">
+                <div class="pull-right">
+                    &copy;2016 Dev4living
+                </div>
+                <nav>
+                    <a href="{{ url('about-us') }}">ABOUT US</a>
+                    <a href="{{ url('open-resource') }}">OPEN RESOURCE</a>
+                </nav>
+            </div>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+            <div class="col-xs-12 visible-sm-block visible-xs-block text-center">
+                <nav class="" style="max-width:60%; margin:0 auto;">
+                    <a href="{{ url('about-us') }}">ABOUT US</a>
+                    <a href="{{ url('open-resource') }}">OPEN RESOURCE</a>
+                </nav>
+                <div>
+                    &copy;2016 Dev4living
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+</body>
+</html>
+
