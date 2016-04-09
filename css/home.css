@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'proxima-nova';
-    src: url(' //instagramstatic-a.akamaihd.net/h1/webfonts/proximanova-light-webfont.eot/63c84728610f.eot');
-    src: url(' //instagramstatic-a.akamaihd.net/h1/webfonts/proximanova-light-webfont.eot/63c84728610f.eot?#iefix') format("embedded-opentype"),
-         url(' //instagramstatic-a.akamaihd.net/h1/webfonts/proximanova-light-webfont.woff/66bbe029f180.woff') format("woff"),
-         url(' //instagramstatic-a.akamaihd.net/h1/webfonts/proximanova-light-webfont.ttf/eb408516399b.ttf') format("truetype"),
-         url(' //instagramstatic-a.akamaihd.net/h1/webfonts/proximanova-light-webfont.svg/858f6a9b7ef3.svg#ProximaNovaLight') format("svg");
+    src: url('63c84728610f.eot');
+    src: url('63c84728610f.eot?#iefix') format("embedded-opentype"),
+         url('66bbe029f180.woff') format("woff"),
+         url('eb408516399b.ttf') format("truetype"),
+         url('//instagramstatic-a.akamaihd.net/h1/webfonts/proximanova-light-webfont.svg/858f6a9b7ef3.svg#ProximaNovaLight') format("svg");
     font-weight: 300;
     font-style: normal;
 }
