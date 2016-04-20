@@ -22,6 +22,7 @@ body {
     left: 0;
     top: 0;
     width: 100%;
+    margin-bottom: 30px;
     padding: 10px;
     background-color: #2b2d2e;
     color: #fff;
@@ -40,9 +41,15 @@ body {
 }
 
 
+@media (max-width: 991px) {
+    #main-body {
+        margin-top: 70px;
+    }
+}
+
 @media (min-width: 768px) {
     #main-body .row-1 {
-        margin: 0 30px 15px;
+        margin: 0 30px;
     }
 }
 
@@ -64,6 +71,11 @@ body {
     border-color: #eee;
 }
 
+@media (max-width: 991px) {
+    #main-body .panel-new-tenant {
+        margin-top: 20px;
+    }
+}
 @media (min-width: 992px) {
     #main-body .panel-new-tenant {
         margin-left: 20px;
@@ -94,3 +106,16 @@ nav a {
     font-weight: 600;
 }
 
+
+
+@media (max-width: 991px) {
+    .carousel .item > div {
+        min-height: 200px;
+        padding-bottom: 30px;
+    }
+}
+@media (min-width: 992px) {
+    .carousel .item > div {
+        min-height: 600px;
+    }
+}
