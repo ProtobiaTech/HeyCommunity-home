@@ -116,6 +116,10 @@ nav a {
 }
 @media (min-width: 992px) {
     .carousel .item > div {
-        min-height: 600px;
+        min-height: 626px;
+    }
+    .carousel .item h2 {
+        margin-top: 0;
+        padding-top: 20px;
     }
 }
