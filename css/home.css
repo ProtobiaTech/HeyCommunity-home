@@ -113,6 +113,10 @@ nav a {
         min-height: 200px;
         padding-bottom: 30px;
     }
+
+    #hey-tabs {
+        margin-top: 10px;
+    }
 }
 @media (min-width: 992px) {
     .carousel .item > div {
@@ -121,5 +125,10 @@ nav a {
     .carousel .item h2 {
         margin-top: 0;
         padding-top: 20px;
+    }
+
+    #hey-tabs {
+        margin-top: 40px;
+        margin-left: 40px;
     }
 }
