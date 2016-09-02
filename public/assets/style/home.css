@@ -17,6 +17,20 @@ body {
     font-weight: normal;
 }
 
+.body-bg {
+    z-index: 1;
+    height: 600px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #eee;
+    opacity: 0.8;
+    background-image: url(https://www.bing.com/az/hprichbg/rb/SnowdoniaAlgae_ZH-CN15321911268_1920x1080.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .banner-box {
     position: fixed;
     left: 0;
@@ -30,7 +44,9 @@ body {
 }
 
 #main-body {
-    max-width: 930px;
+    position: relative;
+    z-index: 11;
+    max-width: 1024px;
     margin: 40px auto 0;
 }
 
@@ -65,21 +81,10 @@ body {
 }
 
 #main-body .panel-new-tenant {
-    margin-top: 55px;
+    margin-top: 120px;
     background-color: #fff;
-    border-radius: 1px;
+    border-radius: 4px;
     border-color: #eee;
-}
-
-@media (max-width: 991px) {
-    #main-body .panel-new-tenant {
-        margin-top: 20px;
-    }
-}
-@media (min-width: 992px) {
-    #main-body .panel-new-tenant {
-        margin-left: 20px;
-    }
 }
 
 #main-body .panel-new-tenant .caption {
@@ -95,6 +100,7 @@ body {
 #main-body .panel-new-tenant .form .form-group .col-sm-12 {
     margin-bottom: 8px;
 }
+
 
 nav {
 
@@ -112,29 +118,28 @@ nav a.active {
 }
 
 
-@media (max-width: 991px) {
-    .carousel .item > div {
-        min-height: 200px;
-        padding-bottom: 30px;
-    }
 
-    #hey-tabs {
-        margin-top: 10px;
-    }
+
+
+#main-carousel {
+    height: 616px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    z-index: 11;
 }
-@media (min-width: 992px) {
-    .carousel .item > div {
-        min-height: 626px;
-    }
-    .carousel .item h2 {
-        margin-top: 0;
-        padding-top: 20px;
-    }
-
-    #hey-tabs {
-        margin-top: 40px;
-        margin-left: 40px;
-    }
+.main-carousel-bg {
+    height: 616px;
+    width: 100%;
+    background-color: #fefefe;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    opacity: 0.8;
 }
 
 

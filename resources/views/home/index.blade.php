@@ -63,4 +63,5 @@
             @include('home.items')
         </div>
     </div>
+    <div class="main-carousel-bg"></div>
 @endsection

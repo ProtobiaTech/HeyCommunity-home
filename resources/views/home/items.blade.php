@@ -89,38 +89,6 @@
                     </div>
                 @endif
             </div>
-
-            <div style="margin:30px 0 0 20px">
-                <div class="h5" style="margin-bottom:4px">新闻动态</div>
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="/news/rework">HeyCommunity 重构并迁移到 Ionic 2</a>
-                        <span class="pull-right">06-30</span>
-                    </li>
-                    <li>
-                        <a href="/news/beta-two">HeyCommunity v1.0.0-beta.2 发布</a>
-                        <span class="pull-right">05-24</span>
-                    </li>
-                    <li>
-                        <a href="/news/beta-one">HeyCommunity v1.0.0-beta 发布</a>
-                        <span class="pull-right">04-20</span>
-                    </li>
-                </ul>
-            </div>
-
-            <div style="margin:30px 0 0 20px">
-                <div class="h5" style="margin-bottom:4px">关注我们</div>
-                <ul class="list-unstyled">
-                    <li>
-                        QQ群:
-                        <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=a4df0bb81f8fc2f749a44a3fa0909179970c7cf828984d819ae6e236296f48cb">
-                            🏡 HeyCommunity.com
-                            (242078519)
-                        </a>
-                    </li>
-                    <li><i class="glyphicon glyphicon-heart" style="color:red;"></i> 微信公众号: <a href="#home" onclick="$('#wechat-qrcode-modal').modal('show');">HEY社区 (HeyCommunity)</a></li>
-                </ul>
-            </div>
         </div>
     </div>
 </div>

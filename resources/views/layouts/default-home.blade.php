@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <div class="body-bg"></div>
     @include('layouts.common')
 
     <div id="main-body">
