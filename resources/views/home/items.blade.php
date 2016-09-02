@@ -1,5 +1,5 @@
 <!-- Home -->
-<div class="item active">
+<div class="item active" id="section-home">
     <div class="row row-1">
         <div class="col-md-6 hidden-sm hidden-xs">
             <div class="phone-box">
@@ -31,7 +31,7 @@
                         </div>
 
                         <div class="col-xs-12">
-                            <p class="h4 text-center">嘿，立即创建你的社区</p>
+                            <p class="h2 text-center">HeyCommunity</p>
                             <p class="visible-xs-block visible-sm-block">
                                 欢迎使用 HeyCommuity 云服务，
                                 在创建你的社区之前，你可以先<a href="http://demo.hey-community.com" target="_blank">体验一下</a>。
@@ -146,7 +146,7 @@
 
 
 <!-- service & price -->
-<div class="item">
+<div class="item" id="section-prod">
     <div>
         <h2>产品与服务</h2>
 
@@ -177,7 +177,7 @@
 
 
 <!-- About us -->
-<div class="item">
+<div class="item" id="section-about">
     <div>
         <h2>关于我们</h2>
         <p>
@@ -208,7 +208,7 @@
 </div>
 
 <!-- Jobs -->
-<div class="item">
+<div class="item" id="section-jobs">
     <div>
         <h2>工作机会 <small>(远程工作)</small></h2>
         <div>

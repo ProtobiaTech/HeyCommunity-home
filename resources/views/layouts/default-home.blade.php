@@ -13,17 +13,16 @@
 </head>
 
 <body>
-    <div class="body-bg"></div>
+    <div class="main-background"></div>
+
     @include('layouts.common')
 
     <div id="main-body">
-        @include('layouts.app-block')
-
-        <div class="container-fluid">
+        <div class="section-body container-fluid">
             @yield('content')
         </div>
 
-        <div class="container-fluid">
+        <div id="footer" class="container-fluid">
             <div class="row" style="margin-bottom:10px;">
                 <div class="col-xs-12 hidden-sm hidden-xs">
                     <div class="pull-right">
@@ -39,13 +38,11 @@
                     </nav>
 
                     <div class="pull-right">
-                        &copy;2015 - 2016 Protobia.tech
-                        &nbsp;&nbsp;&nbsp;
-                        京ICP备 15015443号-8
                     </div>
                     <div>
-                        赣州市进托邦科技有限公司 &nbsp;&nbsp;
-                        联系电话: 17090402884
+                        &copy;2015 - 2016 Protobia.tech
+                        &nbsp;&nbsp;&nbsp;
+                        ICP: 15015443-8
                     </div>
                 </div>
 
@@ -60,33 +57,11 @@
                     </nav>
                     <div>
                         <span>HeyCommunity</span> &nbsp;&nbsp;&nbsp;
-                        联系电话: 17090402884
+                        &copy;2015 - 2016 Protobia.tech
                     </div>
-                    <div>
-                        赣州市进托邦科技有限公司 &nbsp;&nbsp;
-                        京ICP备 15015443号-8
-                    </div>
-                    <div>&copy;2015 - 2016 Protobia.tech</div>
                 </div>
             </div>
         </div>
-
-        <!-- Start of meiqia script -->
-        <script type='text/javascript'>
-            (function(m, ei, q, i, a, j, s) {
-                m[a] = m[a] || function() {
-                    (m[a].a = m[a].a || []).push(arguments)
-                };
-                j = ei.createElement(q),
-                    s = ei.getElementsByTagName(q)[0];
-                j.async = true;
-                j.charset = 'UTF-8';
-                j.src = i + '?v=' + new Date().getUTCDate();
-                s.parentNode.insertBefore(j, s);
-            })(window, document, 'script', '//static.meiqia.com/dist/meiqia.js', '_MEIQIA');
-            _MEIQIA('entId', 18044);
-        </script>
-        <!-- End of meiqia script -->
     </div>
 </body>
 </html>
