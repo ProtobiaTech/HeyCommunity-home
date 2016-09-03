@@ -8,119 +8,72 @@
         </div>
 
         <div class="col-md-6">
-            <div class="panel panel-default panel-new-tenant">
-                @if (Auth::guest())
+            @if (true || Auth::guest())
+                <div class="panel panel-default panel-info">
                     <div class="panel-body">
-                        <div class="hide col-xs-12">
-                            <p class="h3 text-center">HeyCommunity <small>beta</small></p>
-                            <p>HeyCommunity 正在进行公开测试，欢迎试用，遇到任何问题请向我们反馈</p>
-                            <p>免费的 SaaS 云服务，敬请期待</p>
-                            <hr style="margin:10px 0 15px">
-                            <div>
-                                <div style="margin-bottom:4px;">
-                                    <span style="font-size:16px">HeyCommunity DEMO</span> &nbsp;
-                                    <a target="_blank" href="http://demo.hey-community.com">webApp</a> <br>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <p class="h2 text-center">HeyCommunity</p>
+                                <p class="h4 text-center text-muted">线上社区解决方案</p>
+
+                                <div class="row section-feature">
+                                    <div class="col-xs-4">
+                                        <div class="feature-dev text-center">
+                                            <i class="feature-icon fa fa-cloud"></i>
+                                            <div class="feature-keyword">免费云社区</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="feature-dev text-center">
+                                            <i class="feature-icon fa fa-cube"></i>
+                                            <div class="feature-keyword">精美 优雅</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="feature-dev text-center">
+                                            <i class="feature-icon fa fa-github" aria-hidden="true"></i>
+                                            <div class="feature-keyword">GPL 开源</div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <a target="_blank" href="https://itunes.apple.com/cn/app/heycommunity/id1093024405?l=en&mt=8">
-                                    <img style="height:36px;" src="./assets/images/app-store.png">
-                                </a>
-                                <a target="_blank" href="http://pre.im/heycommunity">
-                                    <img style="height:36px;" src="./assets/images/google-play.png">
-                                </a>
-                            </div>
-                        </div>
 
-                        <div class="col-xs-12">
-                            <p class="h2 text-center">HeyCommunity</p>
-                            <p class="visible-xs-block visible-sm-block">
-                                欢迎使用 HeyCommuity 云服务，
-                                在创建你的社区之前，你可以先<a href="http://demo.hey-community.com" target="_blank">体验一下</a>。
-                            </p>
-                            <p class="hidden-xs hidden-sm">
-                                欢迎使用 HeyCommuity 云服务，
-                                在创建你的社区之前，你可以在左侧的手机中体验一下。
-                            </p>
-
-                            <p>
-                                如果你有社区运营和社区定制方面的需求请联系我们，也欢迎你向我们反馈意见和建议。
-                            </p>
-
-                            <div style="margin-top:15px;">
-                                <a class="btn btn-primary btn-block" href="{{ '' }}">开始创建</a>
-                                <div style="margin-top:4px;">
-                                    <input class="" type="checkbox" checked>
-                                    同意<a href="{{ url('terms-of-service') }}">《服务条款》</a>
-                                    <a href="/admin/login" class="pull-right">登录</a>
+                                <div style="">
+                                    <a class="btn-create btn btn-primary btn-block" href="{{ '' }}">创建我的云社区</a>
+                                    <div style="margin-top:4px;">
+                                        <a target="_blank" href="{{ url('https://github.com/dev4living/HeyCommunity') }}">获取程序代码</a>
+                                        <a href="/admin/login" class="pull-right">登录</a>
+                                    </div>
                                 </div>
-                            </div>
-
-                            <hr style="margin:10px 0 15px">
-                            <div>
-                                <div style="margin-bottom:4px;">
-                                    <span style="font-size:16px">HeyCommunity DEMO</span> &nbsp;
-                                    <a target="_blank" href="http://demo.hey-community.com">webApp</a> <br>
-                                </div>
-                                <a target="_blank" href="https://itunes.apple.com/cn/app/heycommunity/id1093024405?l=en&mt=8">
-                                    <img style="height:36px;" src="./assets/images/app-store.png">
-                                </a>
-                                <a target="_blank" href="http://pre.im/heycommunity">
-                                    <img style="height:36px;" src="./assets/images/google-play.png">
-                                </a>
                             </div>
                         </div>
                     </div>
-                @else
-                    <div class="panel-body">
-                        <p class="text-center caption">哟，你有一个社区</p>
-                        <div style="margin:0 30px;">
-                            <p>
-                                应用名称: <a target="_blank" href="http://{{ Auth::user()->domain }}">{{ Auth::user()->site_name }}</a> <br>
-                            </p>
-                            <p>
-                                域名: <a target="_blank" href="http://{{ Auth::user()->domain }}">{{ Auth::user()->domain }}</a> <br>
-                                子域名: <a target="_blank" href="http://{{ Auth::user()->sub_domain }}">{{ Auth::user()->sub_domain }}</a>
-                            </p>
+                </div>
 
-                            <hr style="margin:15px 0;">
-                            <div>
-                                进入<a class="" href="{{ route('admin.home') }}">仪表盘</a>, 你也可以 <a href="{{ route('admin.auth.logout') }}">登出</a>
+                <div class="panel panel-default panel-news">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                新闻动态:
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="/news/rework">HeyCommunity 重构并迁移到 Ionic 2</a>
+                                        <span class="pull-right">06-30</span>
+                                    </li>
+                                    <li>
+                                        <a href="/news/beta-two">HeyCommunity v1.0.0-beta.2 发布</a>
+                                        <span class="pull-right">05-24</span>
+                                    </li>
+                                    <li>
+                                        <a href="/news/beta-one">HeyCommunity v1.0.0-beta 发布</a>
+                                        <span class="pull-right">04-20</span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                @endif
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="wechat-qrcode-modal" class="modal fade" tabindex="99999" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">HeyCommunity</h4>
-            </div>
-            <div class="modal-body">
-                <p>
-                    感谢你对 HEY 社区的关注与支持，欢迎你加入我们的用户 QQ 群，关注我们的微信公众号。 <br>
-                    欢迎你向我们反馈意见和建议。
-                </p>
-                <p></p>
-                <div>
-                    <strong>QQ群:</strong>
-                    <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=a4df0bb81f8fc2f749a44a3fa0909179970c7cf828984d819ae6e236296f48cb">
-                        🏡 HeyCommunity.com
-                        (242078519)
-                    </a>
                 </div>
-
-                <div>
-                    <strong>微信公众号:</strong>
-                    <a href="#">HEY社区</a>
-                    <img style="width:120px; vertical-align:top; margin-top:-5px;" src="/assets/images/wechat-qrcode.jpg">
-                </ul>
-                </div>
-            </div>
+            @else
+            @endif
         </div>
     </div>
 </div>
@@ -207,38 +160,3 @@
     </div>
 </div>
 
-<!-- Jobs -->
-<div class="item" id="section-jobs">
-    <div>
-        <h2>工作机会 <small>(远程工作)</small></h2>
-        <div>
-            <div class="h3">IONIC 工程师</div>
-            <div>
-                需求掌握 Ionic framework / AngularJS / HTML / CSS / JS 等编程技术 <br>
-                1年以上开发经验，能够快速上手项目 <br>
-                月薪 5k - 10k
-            </div>
-
-            <div class="h3">全栈工程师</div>
-            <div>
-                需要掌握前端和后端开发，以及 linux 服务器操作 等技能，最重要的是有卓越的学习能力和解决问题能力 <br>
-                2年以上开发经验 <br>
-                技术关键字: linux / laravel / ionic / angularJs / html / sass <br>
-                月薪 7k - 15K
-            </div>
-
-            <div class="h3">兼职</div>
-            <div>
-                需要各 产品 / 设计 / 运营 / 市场方面技能的优秀人才 <br>
-                2年以上工作经验
-            </div>
-
-            <div style="margin-top:30px;">
-                ps. <br>
-                以上为远程工作，工作时间为每周 40 小时 <br>
-                加分项: github 上有开源项目 / 热爱编程开发 / 自主能力强 / 有创业想法 <br>
-                简历请发: rod(AT)protobia.tech （请认真编写简历，并谈谈对这项工作的想法） <br>
-            </div>
-        </div>
-    </div>
-</div>

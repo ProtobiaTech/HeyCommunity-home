@@ -2,6 +2,7 @@
 <html lang="zh-CN">
 <head>
     <link rel="stylesheet" type="text/css" href="bower-assets/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bower-assets/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="assets/style/home.css">
     <script src="bower-assets/jquery/dist/jquery.min.js"></script>
     <script src="bower-assets/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -29,12 +30,12 @@
                     </div>
                     <nav id="nav-sm">
                         <span>HeyCommunity</span> &nbsp;&nbsp;&nbsp;
-                        <a class="active" href="#home" onclick="$('.carousel').carousel(0)">首页</a>
-                        <a href="#cases" onclick="$('.carousel').carousel(1)">场景和案例</a>
-                        <a href="#prod" onclick="$('.carousel').carousel(2)">服务与价格</a>
-                        <a href="#about" onclick="$('.carousel').carousel(3)">关于我们</a>
-                        <a href="#jobs" onclick="$('.carousel').carousel(4)">工作机会</a>
-                        <a target="_blank" href="https://github.com/dev4living/HeyCommunity">Github</a>
+                        <a href="#home" onclick="$('#main-carousel').carousel(0)">首页</a>
+                        <a href="#cases" onclick="$('#main-carousel').carousel(1)">场景和案例</a>
+                        <a href="#prod" onclick="$('#main-carousel').carousel(2)">产品与服务</a>
+                        <a href="/bbs"><i class="glyphicon glyphicon-fire"></i> 用户社区</a>
+                        <a href="#about" onclick="$(#main-carousel').carousel(3)">关于我们</a>
+                        <a target="_blank" href="https://github.com/dev4living/HeyCommunity">Open Sources</a>
                     </nav>
 
                     <div class="pull-right">
@@ -50,10 +51,10 @@
                     <nav id="nav-xs" class="" style="max-width:90%; margin:0 auto;">
                         <a href="#home" onclick="$('#main-carousel').carousel(0)">首页</a>
                         <a href="#cases" onclick="$('#main-carousel').carousel(1)">场景和案例</a>
-                        <a href="#prod" onclick="$('#main-carousel').carousel(2)">服务与价格</a>
+                        <a href="#prod" onclick="$('#main-carousel').carousel(2)">产品与服务</a>
+                        <a href="/bbs"><i class="glyphicon glyphicon-fire"></i> 用户社区</a>
                         <a href="#about" onclick="$(#main-carousel').carousel(3)">关于我们</a>
-                        <a href="#jobs" onclick="$('#main-carousel').carousel(4)">工作机会</a>
-                        <a target="_blank" href="https://github.com/dev4living/HeyCommunity">Github</a>
+                        <a target="_blank" href="https://github.com/dev4living/HeyCommunity">Open Sources</a>
                     </nav>
                     <div>
                         <span>HeyCommunity</span> &nbsp;&nbsp;&nbsp;
@@ -63,5 +64,55 @@
             </div>
         </div>
     </div>
+
+    <script>
+    window.onhashchange = function() {
+        setCarouselItem();
+    }
+
+    $(function() {
+        setCarouselItem();
+    });
+
+    function setCarouselItem() {
+        var currentHash = location.hash;
+        $('#nav-sm a').removeClass('active');
+        $('#nav-xs a').removeClass('active');
+        $('.main-carousel-bg').removeClass('isHomePage');
+
+        switch (currentHash) {
+            case '#home':
+                $('.main-carousel-bg').addClass('isHomePage');
+                $('#nav-sm a[href*="home"]').addClass('active');
+                $('#nav-xs a[href*="home"]').addClass('active');
+                $('#main-carousel').carousel(0)
+                break;
+            case '#cases':
+                $('#nav-sm a[href*="cases"]').addClass('active');
+                $('#nav-xs a[href*="cases"]').addClass('active');
+                $('#main-carousel').carousel(1)
+                break;
+            case '#prod':
+                $('#nav-sm a[href*="prod"]').addClass('active');
+                $('#nav-xs a[href*="prod"]').addClass('active');
+                $('#main-carousel').carousel(2)
+                break;
+            case '#about':
+                $('#nav-sm a[href*="about"]').addClass('active');
+                $('#nav-xs a[href*="about"]').addClass('active');
+                $('#main-carousel').carousel(3)
+                break;
+            case '#jobs':
+                $('#nav-sm a[href*="jobs"]').addClass('active');
+                $('#nav-xs a[href*="jobs"]').addClass('active');
+                $('#main-carousel').carousel(4)
+                break;
+            default:
+                $('.main-carousel-bg').addClass('isHomePage');
+        }
+    }
+    </script>
+
+
 </body>
 </html>
