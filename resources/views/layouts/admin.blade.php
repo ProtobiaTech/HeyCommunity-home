@@ -43,25 +43,25 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li class="{{ Request::is('admin') ? 'active' : ''}}"><a href="{{ route('admin.home') }}">Home</a></li>
-                <li class="{{ Request::is('admin/timeline*') ? 'active' : ''}}"><a href="{{ route('admin.timeline.index') }}">Timeline</a></li>
-                <li class="hide {{ Request::is('admin/activity*') ? 'active' : ''}}"><a href="{{ route('admin.activity.index') }}">Activity</a></li>
-                <li class="{{ Request::is('admin/topic*') ? 'active' : ''}}"><a href="{{ route('admin.topic.index') }}">Topic</a></li>
+            <ul class="nav navbar-nav hidden">
+                <li class="{{ Request::is('admin') ? 'active' : ''}}"><a href="{{ url('admin.home') }}">Home</a></li>
+                <li class="{{ Request::is('admin/timeline*') ? 'active' : ''}}"><a href="{{ url('admin.timeline.index') }}">Timeline</a></li>
+                <li class="hide {{ Request::is('admin/activity*') ? 'active' : ''}}"><a href="{{ url('admin.activity.index') }}">Activity</a></li>
+                <li class="{{ Request::is('admin/topic*') ? 'active' : ''}}"><a href="{{ url('admin.topic.index') }}">Topic</a></li>
                 <li class="{{ Request::is('admin/system*') ? 'active' : ''}}"><a href="{{ url('admin/system/index') }}">System Setting</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                @if (Auth::tenant()->guest())
-                <li class="{{ Request::is('admin/create-tenant') ? 'active' : ''}}"><a href="{{ route('admin.auth.create-tenant') }}">SignUp</a></li>
-                <li class="{{ Request::is('admin/login') ? 'active' : ''}}"><a href="{{ route('admin.auth.login') }}">Login</a></li>
+                @if (Auth::guest())
+                <li class="{{ Request::is('sign-up') ? 'active' : ''}}"><a href="{{ url('/sign-up') }}">SignUp</a></li>
+                <li class="{{ Request::is('log-in') ? 'active' : ''}}"><a href="{{ url('/log-in') }}">Login</a></li>
                 @else
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ Auth::tenant()->user()->site_name }} <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->site_name }} <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a target="_blank" href="http://{{ Auth::tenant()->user()->domain }}">Go to domain WebApp</a></li>
-                        <li><a target="_blank" href="http://{{ Auth::tenant()->user()->sub_domain }}">Go to sub_domain WebApp</a></li>
-                        <li><a href="{{ route('admin.auth.logout') }}">Logout</a></li>
+                        <li><a target="_blank" href="http://{{ Auth::user()->domain }}">Go to domain WebApp</a></li>
+                        <li><a target="_blank" href="http://{{ Auth::user()->sub_domain }}">Go to sub_domain WebApp</a></li>
+                        <li><a href="{{ url('/log-out') }}">Logout</a></li>
                     </ul>
                 </li>
                 @endif

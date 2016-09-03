@@ -17,3 +17,8 @@ Route::post('log-in', 'TenantController@logInHandler');
 Route::get('sign-up', 'TenantController@signUp');
 Route::post('sign-up', 'TenantController@signUpHandler');
 Route::get('log-out', 'TenantController@logOutHandler');
+
+
+Route::group(['prefix' => 'dashboard'], function() {
+    Route::get('/', ['as' => 'dashboard.home', 'uses' => 'Dashboard\HomeController@index']);
+});

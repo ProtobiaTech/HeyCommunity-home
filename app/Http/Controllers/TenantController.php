@@ -17,22 +17,26 @@ class TenantController extends Controller
     public function LogIn()
     {
         return view('tenants.log-in');
-        // return view('tenant.log-in');
-        if (Auth::guest()) {
-            $tenant = Tenant::findOrFail(1);
-            Auth::login($tenant, true);
-        } else {
-        }
-
-        dd($tenant);
     }
 
     /**
      *
      */
-    public function LogInHandler()
+    public function LogInHandler(Request $request)
     {
+        $this->validate($request, [
+            'email'         =>      'required|email',
+            'password'      =>      'required|min:6',
+        ]);
 
+        $Tenant = Tenant::where(['email' => $request->email])->first();
+        if ($Tenant && Hash::check($request->password, $Tenant->password)) {
+            Auth::login($Tenant);
+            return redirect()->route('dashboard.home');
+        } else {
+            $request->flash();
+            return redirect()->back()->withErrors(['fail' => 'email or password error']);
+        }
     }
 
     /**
@@ -40,7 +44,7 @@ class TenantController extends Controller
      */
     public function signUp()
     {
-        return view('tenant.sign-up');
+        return view('tenants.sign-up');
     }
 
     /**
@@ -73,7 +77,11 @@ class TenantController extends Controller
 
         if ($Tenant->save()) {
             Auth::login($Tenant);
-            return $Tenant;
+            if ($request->ajax()) {
+                return $Tenant;
+            } else {
+                return redirect()->route('home');
+            }
         } else {
             abort(500, $Tenant);
         }

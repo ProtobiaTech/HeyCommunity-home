@@ -44,7 +44,7 @@
                                         <a href="{{ url('/log-in') }}" class="pull-right">登录</a>
                                     </div>
                                 @else
-                                    <a class="btn-create btn btn-primary btn-block" href="{{ '' }}">进入社区管理后台</a>
+                                    <a class="btn-create btn btn-primary btn-block" href="{{ route('dashboard.home') }}">进入社区管理后台</a>
                                     <div style="margin-top:4px;">
                                         <a target="_blank" href="{{ url('https://github.com/dev4living/HeyCommunity') }}">获取程序代码</a>
                                         <a href="{{ url('/bbs') }}" class="pull-right">用户社区</a>
