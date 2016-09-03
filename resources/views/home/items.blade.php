@@ -12,7 +12,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-xs-12">
-                            <p class="h2 text-center">HeyCommunity</p>
+                            <h1 class="h2 text-center">HeyCommunity <sup>v2</sup></h1>
                             <p class="h4 text-center text-muted">线上社区解决方案</p>
 
                             <div class="row section-feature">
@@ -38,13 +38,16 @@
 
                             <div style="">
                                 @if (Auth::guest())
-                                    <a class="btn-create btn btn-primary btn-block" data-toggle="modal" data-target="#signUpModal" href="#home">创建我的云社区</a>
+                                    <a class="hidden btn-create btn btn-primary btn-block" data-toggle="modal" data-target="#signUpModal" href="#home">创建我的云社区</a>
+                                    <a class="btn-create btn btn-primary btn-block">即将上线，敬请期待</a>
                                     <div style="margin-top:4px;">
                                         <a target="_blank" href="{{ url('https://github.com/dev4living/HeyCommunity') }}">获取程序代码</a>
-                                        <a href="{{ url('/log-in') }}" class="pull-right">登录</a>
+                                        <a class="hidden" href="{{ url('/log-in') }}" class="pull-right">登录</a>
+                                        <a target="_blank" href="{{ url('/bbs') }}" class="pull-right">用户社区</a>
                                     </div>
                                 @else
-                                    <a class="btn-create btn btn-primary btn-block" href="{{ route('dashboard.home') }}">进入社区管理后台</a>
+                                    <a class="hidden btn-create btn btn-primary btn-block" href="{{ route('dashboard.home') }}">进入社区管理后台</a>
+                                    <a class="btn-create btn btn-primary btn-block">即将上线，敬请期待</a>
                                     <div style="margin-top:4px;">
                                         <a target="_blank" href="{{ url('https://github.com/dev4living/HeyCommunity') }}">获取程序代码</a>
                                         <a target="_blank" href="{{ url('/bbs') }}" class="pull-right">用户社区</a>
