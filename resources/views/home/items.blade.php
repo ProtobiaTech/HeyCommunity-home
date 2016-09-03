@@ -85,11 +85,11 @@
         <h2>场景和案例</h2>
 
         <div class="row">
-            <div class="col-sm-6 col-md-4">
+            <div class="item-case text-center col-sm-6 col-md-4">
                 <iframe src="http://hxtrans.hey-community.cn"></iframe>
                 <div>交通爱好者俱乐部</div>
             </div>
-            <div class="col-sm-6 col-md-4">
+            <div class="item-case text-center col-sm-6 col-md-4">
                 <iframe src="http://www.hey-ganzhou.com"></iframe>
                 <div>同城社区</div>
             </div>

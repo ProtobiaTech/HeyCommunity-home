@@ -47,6 +47,37 @@ body {
 
   .main-carousel-bg {
     border-radius: 4px 20px 4px 4px !important; } }
+@media (max-width: 768px) {
+  #main-body {
+    margin-top: 0px !important; }
+    #main-body #section-home {
+      width: 100%;
+      height: auto; }
+      #main-body #section-home .panel-info {
+        margin-top: 20px !important; }
+      #main-body #section-home .panel-news, #main-body #section-home .panel-info {
+        margin-right: 0 !important; }
+
+  body {
+    background-color: #eee !important; }
+
+  .main-background {
+    display: none !important; }
+
+  #main-carousel .carousel-inner {
+    height: auto !important; }
+
+  .main-carousel-bg {
+    display: none;
+    border-radius: 0 !important; }
+
+  #section-cases .item-case {
+    margin-bottom: 30px; }
+    #section-cases .item-case:last-of-type {
+      margin-bottom: 0; }
+
+  #nav-xs {
+    margin-top: 20px; } }
 #main-body {
   position: relative;
   z-index: 11;

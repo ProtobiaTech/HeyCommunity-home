@@ -18,6 +18,16 @@
 
     @include('layouts.common')
 
+    <nav id="nav-xs" class="visible-sm-block visible-xs-block" style="max-width:90%; margin:0 auto;">
+        <h1 class="h3">HeyCommunity</h1>
+        <a href="#home" onclick="$('#main-carousel').carousel(0)">首页</a>
+        <a href="#cases" onclick="$('#main-carousel').carousel(1)">场景和案例</a>
+        <a href="#prod" onclick="$('#main-carousel').carousel(2)">产品与服务</a>
+        <a href="/bbs"><i class="glyphicon glyphicon-fire"></i> 用户社区</a>
+        <a href="#about" onclick="$(#main-carousel').carousel(3)">关于我们</a>
+        <a target="_blank" href="https://github.com/dev4living/HeyCommunity">Open Sources</a>
+    </nav>
+
     <div id="main-body">
         <div class="section-body container-fluid">
             @yield('content')
@@ -48,14 +58,7 @@
                 </div>
 
                 <div class="col-xs-12 visible-sm-block visible-xs-block text-center">
-                    <nav id="nav-xs" class="" style="max-width:90%; margin:0 auto;">
-                        <a href="#home" onclick="$('#main-carousel').carousel(0)">首页</a>
-                        <a href="#cases" onclick="$('#main-carousel').carousel(1)">场景和案例</a>
-                        <a href="#prod" onclick="$('#main-carousel').carousel(2)">产品与服务</a>
-                        <a href="/bbs"><i class="glyphicon glyphicon-fire"></i> 用户社区</a>
-                        <a href="#about" onclick="$(#main-carousel').carousel(3)">关于我们</a>
-                        <a target="_blank" href="https://github.com/dev4living/HeyCommunity">Open Sources</a>
-                    </nav>
+                    <hr style="margin-top:0; margin-bottom:10px; border-color:#fefefe;">
                     <div>
                         <span>HeyCommunity</span> &nbsp;&nbsp;&nbsp;
                         &copy;2015 - 2016 Protobia.tech
@@ -112,7 +115,5 @@
         }
     }
     </script>
-
-
 </body>
 </html>

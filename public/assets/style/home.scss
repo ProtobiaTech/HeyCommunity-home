@@ -80,6 +80,54 @@ body {
 }
 
 
+@media (max-width: 768px) {
+    #main-body {
+        margin-top: 0px !important;
+        #section-home {
+            width: 100%;
+            height: auto;
+            .panel-info {
+                margin-top: 20px !important;
+            }
+            .panel-news, .panel-info {
+                margin-right: 0 !important;
+            }
+        }
+    }
+
+    body {
+        background-color: #eee !important;
+    }
+
+    .main-background {
+        display: none !important;
+    }
+
+    #main-carousel {
+        .carousel-inner {
+            height: auto !important;
+        }
+    }
+    .main-carousel-bg {
+        display: none;
+        border-radius: 0 !important;
+    }
+
+    #section-cases {
+        .item-case {
+            margin-bottom: 30px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    #nav-xs {
+        margin-top: 20px;
+    }
+}
+
 
 #main-body {
     position: relative;
