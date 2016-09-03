@@ -136,6 +136,7 @@ body {
 
     #main-carousel {
         margin-bottom: 20px;
+        padding: 0 10px;
         position: relative;
         z-index: 11;
 
@@ -143,6 +144,10 @@ body {
             height: 600px;
             overflow-x: hidden;
             overflow-y: hidden;
+        }
+
+        h2 {
+            margin-top: 40px;
         }
     }
 
@@ -155,7 +160,7 @@ body {
         position: absolute;
         z-index: 1;
         top: 0;
-        opacity: 0.4;
+        opacity: 0.6;
 
         &.isHomePage {
             opacity: 0;

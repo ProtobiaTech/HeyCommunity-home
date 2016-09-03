@@ -47,7 +47,7 @@
                                     <a class="btn-create btn btn-primary btn-block" href="{{ route('dashboard.home') }}">进入社区管理后台</a>
                                     <div style="margin-top:4px;">
                                         <a target="_blank" href="{{ url('https://github.com/dev4living/HeyCommunity') }}">获取程序代码</a>
-                                        <a href="{{ url('/bbs') }}" class="pull-right">用户社区</a>
+                                        <a target="_blank" href="{{ url('/bbs') }}" class="pull-right">用户社区</a>
                                     </div>
                                 @endif
                             </div>
@@ -63,15 +63,15 @@
                             新闻动态:
                             <ul class="list-unstyled">
                                 <li>
-                                    <a href="/news/rework">HeyCommunity 重构并迁移到 Ionic 2</a>
+                                    <a>HeyCommunity 重构并迁移到 Ionic 2</a>
                                     <span class="pull-right">06-30</span>
                                 </li>
                                 <li>
-                                    <a href="/news/beta-two">HeyCommunity v1.0.0-beta.2 发布</a>
+                                    <a>HeyCommunity v1.0.0-beta.2 发布</a>
                                     <span class="pull-right">05-24</span>
                                 </li>
                                 <li>
-                                    <a href="/news/beta-one">HeyCommunity v1.0.0-beta 发布</a>
+                                    <a>HeyCommunity v1.0.0-beta 发布</a>
                                     <span class="pull-right">04-20</span>
                                 </li>
                             </ul>
@@ -92,11 +92,9 @@
         <div class="row">
             <div class="item-case text-center col-sm-6 col-md-4">
                 <iframe src="http://hxtrans.hey-community.cn"></iframe>
-                <div>交通爱好者俱乐部</div>
             </div>
             <div class="item-case text-center col-sm-6 col-md-4">
                 <iframe src="http://www.hey-ganzhou.com"></iframe>
-                <div>同城社区</div>
             </div>
         </div>
     </div>
@@ -108,27 +106,26 @@
     <div>
         <h2>产品与服务</h2>
 
-        <h3>## HeyCommunity 云社区 <small>免费</small></h3>
+        <h3>## HeyCommunity 云社区 <sup>V2</sup> <small>免费</small></h3>
         <div>
-            DEMO: <a href="http://demo.hey-community.com">demo.hey-community.com</a> <br>
-            立即创建: <a href="/admin/create-tenant">Create Tenant</a>
+            即将上线，敬请期待 ...
             <br>
             <br>
         </div>
 
         <h3>## 技术服务</h3>
         <div>
-            我们开源（GPLv3授权）适配 iOS / android / window phone 的 hybrid app <br>
-            你可以基于它进行二次开发构建自己的社区 app <br>
-            如果有需要你也可以找我们为您定制开发你的社区 app，我们很乐意帮助到您
+            开源的 HeyCommunity(GPLv3授权)，适配于 iOS app / android app / window phone app / web app / 微信网页应用 等 <br>
+            你可以基于它进行二次开发，构建你的社区 app <br>
+            如果有需要，我们很乐意帮助你，定制开发你的社区 app
             <br>
             <br>
         </div>
 
         <h3>## 社区运营服务</h3>
         <div>
-            同时，我们为有需要的用户提专业的社区运营服务 <br>
-            欢迎联系我们
+            敬请期待 ... <br>
+            如果迫不及待那就在用户社区或 QQ 群与我们一起交流学习吧
         </div>
     </div>
 </div>
@@ -139,16 +136,7 @@
     <div>
         <h2>关于我们</h2>
         <p>
-            HeyCommunity 是 protobia.tech 为中小社群提供的线上社区解决方案 <br>
-            从 2015 年底开始，我们专注于移动社交领域 <br>
-            致力于为中小社群的提供 免费 / 多元化 / 便捷好用 的线上社交服务 <br>
-            让社群的优质内容得以沉淀，增长良好的社群社交氛围，让社群更具团结与凝聚
-        </p>
-
-        <p>
-            protobia.tech 是一个远程协同工作团队，成员分布在大江南北五湖四海 <br>
-            本着助力中小社群知识经验交流与精神文明建设的初心组成了一个团队 <br>
-            团队成员均在互联网拥有丰富的从业经验，为了这项事业全力以赴
+            嗯，我们先保持神秘
         </p>
 
         <div style="margin-top:30px" class="h4">联系方式</div>

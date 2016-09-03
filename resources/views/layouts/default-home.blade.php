@@ -18,13 +18,13 @@
 
     @include('layouts.common')
 
-    <nav id="nav-xs" class="visible-sm-block visible-xs-block" style="max-width:90%; margin:0 auto;">
+    <nav id="nav-xs" class="visible-xs-block" style="max-width:90%; margin:0 auto;">
         <h1 class="h3">HeyCommunity</h1>
         <a href="#home" onclick="$('#main-carousel').carousel(0)">首页</a>
         <a href="#cases" onclick="$('#main-carousel').carousel(1)">场景和案例</a>
         <a href="#prod" onclick="$('#main-carousel').carousel(2)">产品与服务</a>
-        <a href="/bbs"><i class="glyphicon glyphicon-fire"></i> 用户社区</a>
         <a href="#about" onclick="$(#main-carousel').carousel(3)">关于我们</a>
+        <a href="/bbs"><i class="glyphicon glyphicon-fire"></i> 用户社区</a>
         <a target="_blank" href="https://github.com/dev4living/HeyCommunity">Open Sources</a>
     </nav>
 
@@ -35,7 +35,7 @@
 
         <div id="footer" class="container-fluid">
             <div class="row" style="margin-bottom:10px;">
-                <div class="col-xs-12 hidden-sm hidden-xs">
+                <div class="col-xs-12 hidden-xs">
                     <div class="pull-right">
                     </div>
                     <nav id="nav-sm">
@@ -43,8 +43,8 @@
                         <a href="#home" onclick="$('#main-carousel').carousel(0)">首页</a>
                         <a href="#cases" onclick="$('#main-carousel').carousel(1)">场景和案例</a>
                         <a href="#prod" onclick="$('#main-carousel').carousel(2)">产品与服务</a>
-                        <a href="/bbs"><i class="glyphicon glyphicon-fire"></i> 用户社区</a>
                         <a href="#about" onclick="$(#main-carousel').carousel(3)">关于我们</a>
+                        <a target="_blank" href="/bbs"><i class="glyphicon glyphicon-fire"></i> 用户社区</a>
                         <a target="_blank" href="https://github.com/dev4living/HeyCommunity">Open Sources</a>
                     </nav>
 
