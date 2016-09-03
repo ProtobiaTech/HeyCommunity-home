@@ -17,23 +17,56 @@
                     <h4 class="modal-title">创建一个云社区</h4>
                 </div>
                 <div class="modal-body">
-                    @if (count($errors) > 0)
-                        <div class="alert alert-danger">
-                            <strong>Whoops!</strong> There were some problems with your input.<br><br>
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
+                    <!-- form js -->
+                    <script>
+                        function signUpSubmit(event) {
+                            event.preventDefault();
+                            $.ajax({
+                                method: "POST",
+                                url: event.target.action,
+                                data: $(event.target).serialize(),
+                                success: function() {
+                                    location.reload();
+                                },
+                                error: function(ret) {
+                                    signUpSubmitErrorHandler(ret.responseJSON);
+                                },
+                            });
+                        }
 
-                    {!! Form::open(array('url' => '/log-in', 'method' => 'post', 'class' => 'form form-horizontal')) !!}
+                        $(function() {
+                            $('.sign-up-form input').on('change', function(event) {
+                                obj = $('.sign-up-form .form-group').has(event.target);
+                                obj.removeClass('has-success');
+                                obj.removeClass('has-error');
+                                obj.find('.help-block').text('');
+                                obj.find('.help-block').hide();
+                            })
+                        })
+
+                        function signUpSubmitErrorHandler(data) {
+                            $('.sign-up-form .form-group').removeClass('has-error');
+                            $('.sign-up-form .form-group').addClass('has-success');
+                            $('.sign-up-form .form-group .help-block').hide();
+
+                            for (var field in data) {
+                                obj = $('.sign-up-form .form-group').has("input[name=" + field + "]");
+                                console.log(obj, field);
+                                obj.removeClass('has-success');
+                                obj.addClass('has-error');
+                                obj.find('.help-block').text(data[field]);
+                                obj.find('.help-block').show();
+                            }
+                        }
+                    </script>
+
+                    {!! Form::open(array('url' => '/sign-up', 'method' => 'post', 'class' => 'sign-up-form form form-horizontal', 'onsubmit' => 'signUpSubmit(event)')) !!}
                     <div class="container-fluid">
                         <div class="form-group">
                             <label class="col-sm-3 control-label" for="title">应用名称</label>
                             <div class="col-sm-9">
                                 <input class="form-control" type="text" name="site_name" value="{{ old('site_name') }}" placeholder="应用名称">
+                                <span class="help-block"></span>
                             </div>
                         </div>
 
@@ -44,6 +77,7 @@
                                     <span class="input-group-addon" id="sizing-addon1">http://</span>
                                     <input class="form-control" type="text" name="domain" value="{{ old('domain') }}" placeholder="site-domain.com">
                                 </div>
+                                <span class="help-block"></span>
                             </div>
                         </div>
 
@@ -55,6 +89,7 @@
                                     <input class="form-control" type="text" name="sub_domain" value="{{ old('sub_domain') }}" placeholder="sub-domain">
                                     <span class="input-group-addon" id="sizing-addon1">.hey-community.com</span>
                                 </div>
+                                <span class="help-block"></span>
                             </div>
                         </div>
 
@@ -62,6 +97,7 @@
                             <label class="col-sm-3 control-label" for="title">管理员邮箱</label>
                             <div class="col-sm-9">
                                 <input class="form-control" type="text" name="email" value="{{ old('email') }}" placeholder="admin@hey-community.com">
+                                <span class="help-block"></span>
                             </div>
                         </div>
 
@@ -69,6 +105,7 @@
                             <label class="col-sm-3 control-label" for="title">管理员手机</label>
                             <div class="col-sm-9">
                                 <input class="form-control" type="text" name="phone" value="{{ old('phone') }}" placeholder="13112341234">
+                                <span class="help-block"></span>
                             </div>
                         </div>
 
@@ -76,6 +113,7 @@
                             <label class="col-sm-3 control-label" for="title">管理员密码</label>
                             <div class="col-sm-9">
                                 <input class="form-control" type="password" name="password" value="{{ old('password') }}" placeholder="管理员密码">
+                                <span class="help-block"></span>
                             </div>
                         </div>
 

@@ -12,3 +12,8 @@
 */
 
 Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
+Route::get('log-in', 'TenantController@logIn');
+Route::post('log-in', 'TenantController@logInHandler');
+Route::get('sign-up', 'TenantController@signUp');
+Route::post('sign-up', 'TenantController@signUpHandler');
+Route::get('log-out', 'TenantController@logOutHandler');

@@ -274,6 +274,13 @@ body {
 
 #signUpModal {
     top: 90px;
+
+    .form-group {
+        .help-block {
+            display: none;
+            margin-bottom: 0;
+        }
+    }
 }
 
 

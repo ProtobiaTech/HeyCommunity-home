@@ -166,6 +166,9 @@ body {
 
 #signUpModal {
   top: 90px; }
+  #signUpModal .form-group .help-block {
+    display: none;
+    margin-bottom: 0; }
 
 nav a {
   display: inline-block;
