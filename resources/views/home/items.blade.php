@@ -8,72 +8,77 @@
         </div>
 
         <div class="col-md-6">
-            @if (true || Auth::guest())
-                <div class="panel panel-default panel-info">
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <p class="h2 text-center">HeyCommunity</p>
-                                <p class="h4 text-center text-muted">线上社区解决方案</p>
+            <div class="panel panel-default panel-info">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p class="h2 text-center">HeyCommunity</p>
+                            <p class="h4 text-center text-muted">线上社区解决方案</p>
 
-                                <div class="row section-feature">
-                                    <div class="col-xs-4">
-                                        <div class="feature-dev text-center">
-                                            <i class="feature-icon fa fa-cloud"></i>
-                                            <div class="feature-keyword">免费云社区</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <div class="feature-dev text-center">
-                                            <i class="feature-icon fa fa-cube"></i>
-                                            <div class="feature-keyword">精美 优雅</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <div class="feature-dev text-center">
-                                            <i class="feature-icon fa fa-github" aria-hidden="true"></i>
-                                            <div class="feature-keyword">GPL 开源</div>
-                                        </div>
+                            <div class="row section-feature">
+                                <div class="col-xs-4">
+                                    <div class="feature-dev text-center">
+                                        <i class="feature-icon fa fa-cloud"></i>
+                                        <div class="feature-keyword">免费云社区</div>
                                     </div>
                                 </div>
+                                <div class="col-xs-4">
+                                    <div class="feature-dev text-center">
+                                        <i class="feature-icon fa fa-cube"></i>
+                                        <div class="feature-keyword">精美 优雅</div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="feature-dev text-center">
+                                        <i class="feature-icon fa fa-github" aria-hidden="true"></i>
+                                        <div class="feature-keyword">GPL 开源</div>
+                                    </div>
+                                </div>
+                            </div>
 
-                                <div style="">
-                                    <a class="btn-create btn btn-primary btn-block" href="{{ '' }}">创建我的云社区</a>
+                            <div style="">
+                                @if (Auth::guest())
+                                    <a class="btn-create btn btn-primary btn-block" data-toggle="modal" data-target="#signUpModal" href="#home">创建我的云社区</a>
                                     <div style="margin-top:4px;">
                                         <a target="_blank" href="{{ url('https://github.com/dev4living/HeyCommunity') }}">获取程序代码</a>
-                                        <a href="/admin/login" class="pull-right">登录</a>
+                                        <a href="{{ url('/log-in') }}" class="pull-right">登录</a>
                                     </div>
-                                </div>
+                                @else
+                                    <a class="btn-create btn btn-primary btn-block" href="{{ '' }}">进入社区管理后台</a>
+                                    <div style="margin-top:4px;">
+                                        <a target="_blank" href="{{ url('https://github.com/dev4living/HeyCommunity') }}">获取程序代码</a>
+                                        <a href="{{ url('/bbs') }}" class="pull-right">用户社区</a>
+                                    </div>
+                                @endif
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="panel panel-default panel-news">
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                新闻动态:
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <a href="/news/rework">HeyCommunity 重构并迁移到 Ionic 2</a>
-                                        <span class="pull-right">06-30</span>
-                                    </li>
-                                    <li>
-                                        <a href="/news/beta-two">HeyCommunity v1.0.0-beta.2 发布</a>
-                                        <span class="pull-right">05-24</span>
-                                    </li>
-                                    <li>
-                                        <a href="/news/beta-one">HeyCommunity v1.0.0-beta 发布</a>
-                                        <span class="pull-right">04-20</span>
-                                    </li>
-                                </ul>
-                            </div>
+            <div class="panel panel-default panel-news">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            新闻动态:
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="/news/rework">HeyCommunity 重构并迁移到 Ionic 2</a>
+                                    <span class="pull-right">06-30</span>
+                                </li>
+                                <li>
+                                    <a href="/news/beta-two">HeyCommunity v1.0.0-beta.2 发布</a>
+                                    <span class="pull-right">05-24</span>
+                                </li>
+                                <li>
+                                    <a href="/news/beta-one">HeyCommunity v1.0.0-beta 发布</a>
+                                    <span class="pull-right">04-20</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            @else
-            @endif
+            </div>
         </div>
     </div>
 </div>

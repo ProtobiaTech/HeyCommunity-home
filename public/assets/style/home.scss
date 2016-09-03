@@ -131,7 +131,6 @@ body {
 
 #main-body {
     position: relative;
-    z-index: 11;
     max-width: 1024px;
     margin: 40px auto 0;
 
@@ -195,7 +194,7 @@ body {
         }
 
         .panel-info {
-            margin-top: 120px;
+            margin-top: 80px;
             margin-right: 70px;
             background-color: hsla(255, 255, 255, 0.6);
             border-radius: 4px;
@@ -270,6 +269,11 @@ body {
             width: 100%;
         }
     }
+}
+
+
+#signUpModal {
+    top: 90px;
 }
 
 
