@@ -57,7 +57,7 @@
                     </div>
                 </div>
 
-                <div class="col-xs-12 visible-sm-block visible-xs-block text-center">
+                <div class="col-xs-12 visible-xs-block text-center">
                     <hr style="margin-top:0; margin-bottom:10px; border-color:#fefefe;">
                     <div>
                         <span>HeyCommunity</span> &nbsp;&nbsp;&nbsp;
