@@ -3,7 +3,7 @@
     <div class="row row-1">
         <div class="col-md-6 hidden-sm hidden-xs">
             <div class="phone-box">
-                <iframe src="http://sns.hey-community.com"></iframe>
+                <iframe src="http://v2.hey-community.com"></iframe>
             </div>
         </div>
 

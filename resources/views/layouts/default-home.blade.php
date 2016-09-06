@@ -18,7 +18,7 @@
 
     @include('layouts.common')
 
-    <nav id="nav-xs" class="visible-xs-block" style="max-width:90%; margin:0 auto;">
+    <nav id="nav-xs" class="visible-xs-block text-center" style="max-width:90%; margin:0 auto;">
         <h1 class="h3">HeyCommunity</h1>
         <a href="#home" onclick="$('#main-carousel').carousel(0)">首页</a>
         <a href="#cases" onclick="$('#main-carousel').carousel(1)">场景和案例</a>
