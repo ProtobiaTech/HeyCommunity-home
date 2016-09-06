@@ -41,8 +41,26 @@
                                 obj.removeClass('has-error');
                                 obj.find('.help-block').text('');
                                 obj.find('.help-block').hide();
-                            })
+                            });
+
+                            randomBackgroundImg();
+                            setInterval(randomBackgroundImg, 10000);
                         })
+
+                        function randomBackgroundImg() {
+                            var imgs = [
+                                'https://www.bing.com/az/hprichbg/rb/SnowdoniaAlgae_ZH-CN15321911268_1920x1080.jpg',
+                                'https://az29176.vo.msecnd.net/videocontent/Waterfalls_Phnom_Kulen_Natl_Park_shutterstock_5582423_768_HD_ZH-CN1966768580.jpg',
+                                'https://www.bing.com/az/hprichbg/rb/UrbanPainters_ZH-CN8992212566_1920x1080.jpg',
+                                'https://www.bing.com/az/hprichbg/rb/UrbanPainters_ZH-CN8992212566_1920x1080.jpg',
+                                'https://www.bing.com/az/hprichbg/rb/UrbanPainters_ZH-CN8992212566_1920x1080.jpg',
+                                'https://www.bing.com/az/hprichbg/rb/CircularIncaTerraces_ZH-CN12305945804_1920x1080.jpg',
+                                'https://www.bing.com/az/hprichbg/rb/BonifacioCliffs_ZH-CN10939302737_1920x1080.jpg',
+                            ];
+                            var i = Math.floor(Math.random() * (imgs.length - 0 + 1)) + 0;
+                            var img = 'url(' + imgs[i] + ')';
+                            $('.main-background').css('background-image', img);
+                        }
 
                         function signUpSubmitErrorHandler(data) {
                             $('.sign-up-form .form-group').removeClass('has-error');
