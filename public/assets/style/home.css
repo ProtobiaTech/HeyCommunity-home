@@ -184,4 +184,19 @@ nav a.active {
   color: #23537c;
   text-decoration: underline; }
 
+#footer .sns a {
+  color: #333; }
+#footer .sns .wechat-a:hover .wechat-box {
+  display: block; }
+#footer .sns .wechat-a .wechat-box {
+  position: absolute;
+  bottom: 30px;
+  right: 15px;
+  z-index: 11;
+  display: none; }
+  #footer .sns .wechat-a .wechat-box img {
+    width: 200px; }
+#footer .section-nav a {
+  color: #333; }
+
 /*# sourceMappingURL=home.css.map */

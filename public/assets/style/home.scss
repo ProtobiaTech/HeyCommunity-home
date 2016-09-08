@@ -312,3 +312,40 @@ nav a.active {
     color: #23537c;
     text-decoration: underline;
 }
+
+
+
+//
+//
+// -----------------------------
+#footer {
+    .sns {
+        a {
+            color: #333;
+        }
+
+        .wechat-a {
+            &:hover {
+                .wechat-box {
+                    display: block;
+                }
+            }
+
+            .wechat-box {
+                position: absolute;
+                bottom: 30px;
+                right: 15px;
+                z-index: 11;
+                display: none;
+
+                img {
+                     width: 200px;
+                }
+            }
+        }
+    }
+
+    .section-nav a {
+        color: #333;
+    }
+}

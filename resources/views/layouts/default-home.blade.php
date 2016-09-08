@@ -46,9 +46,27 @@
                         <a href="#about" onclick="$(#main-carousel').carousel(3)">关于我们</a>
                         <a target="_blank" href="/bbs"><i class="glyphicon glyphicon-fire"></i> 用户社区</a>
                         <a target="_blank" href="https://github.com/dev4living/HeyCommunity">Open Sources</a>
+
+                        <div class="pull-right hidden-xs hidden-sm" style="height:20px; margin-left:30px;">
+                            <iframe src="https://ghbtns.com/github-btn.html?user=dev4living&repo=HeyCommunity&type=fork&count=true" frameborder="0" scrolling="0" width="82px" height="20px"></iframe>
+                        </div>
+                        <div class="pull-right" style="height:20px;">
+                            <iframe src="https://ghbtns.com/github-btn.html?user=dev4living&repo=HeyCommunity&type=star&count=true" frameborder="0" scrolling="0" width="82px" height="20px"></iframe>
+                        </div>
                     </nav>
 
-                    <div class="pull-right">
+                    <div class="pull-right sns">
+                        <span>
+                            <i class="fa fa-qq" aria-hidden="true"></i>
+                            <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=f9ee4a4ca4a3e44c2bd6d6c5da9423fa63f46f150205d468299cdcce32606b71">QQ群: (242078519)</a>
+                        </span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzIwNjM5MDQ5NA==&mid=100000001&idx=1&sn=dd2021fc926d7dc32fe83feeadf396d3&scene=1&srcid=0908kgRYlY7AoVbgxrfzi3bq#rd" class="wechat-a">
+                            <i class="fa fa-weixin" aria-hidden="true"></i> 微信公众号: HEY社区
+                            <div class="wechat-box">
+                                <img src="http://v1.hey-community.com/images/wechat-qrcode.jpg">
+                            </div>
+                        </a>
                     </div>
                     <div>
                         &copy;2015 - 2016 Protobia.tech
@@ -57,11 +75,25 @@
                     </div>
                 </div>
 
-                <div class="col-xs-12 visible-xs-block text-center">
+                <div class="section-nav col-xs-12 visible-xs-block text-center">
                     <hr style="margin-top:0; margin-bottom:10px; border-color:#fefefe;">
+                    <div>
+                        <span>
+                            <i class="fa fa-qq" aria-hidden="true"></i>
+                            <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=f9ee4a4ca4a3e44c2bd6d6c5da9423fa63f46f150205d468299cdcce32606b71">QQ群: (242078519)</a>
+                        </span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzIwNjM5MDQ5NA==&mid=100000001&idx=1&sn=dd2021fc926d7dc32fe83feeadf396d3&scene=1&srcid=0908kgRYlY7AoVbgxrfzi3bq#rd" class="wechat-a">
+                            <i class="fa fa-weixin" aria-hidden="true"></i> 微信公众号: HEY社区
+                        </a>
+                    </div>
                     <div>
                         <span>HeyCommunity</span> &nbsp;&nbsp;&nbsp;
                         &copy;2015 - 2016 Protobia.tech
+                    </div>
+                    <div class="" style="height:20px; margin-top:8px;">
+                        <iframe src="https://ghbtns.com/github-btn.html?user=dev4living&repo=HeyCommunity&type=star&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+                        <iframe src="https://ghbtns.com/github-btn.html?user=dev4living&repo=HeyCommunity&type=fork&count=true" frameborder="0" scrolling="0" width="82px" height="20px"></iframe>
                     </div>
                 </div>
             </div>
