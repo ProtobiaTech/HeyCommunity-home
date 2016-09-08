@@ -79,7 +79,7 @@ body {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     #main-body {
         margin-top: 0px !important;
         #section-home {
@@ -124,6 +124,16 @@ body {
 
     #nav-xs {
         margin-top: 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #main-body {
+        #section-home {
+            .phone-box, .panel-news, .panel-info {
+                margin-right: 0 !important;
+            }
+        }
     }
 }
 

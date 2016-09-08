@@ -46,7 +46,7 @@ body {
 
   .main-carousel-bg {
     border-radius: 4px 20px 4px 4px !important; } }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #main-body {
     margin-top: 0px !important; }
     #main-body #section-home {
@@ -77,6 +77,9 @@ body {
 
   #nav-xs {
     margin-top: 20px; } }
+@media (min-width: 768px) and (max-width: 991px) {
+  #main-body #section-home .phone-box, #main-body #section-home .panel-news, #main-body #section-home .panel-info {
+    margin-right: 0 !important; } }
 #main-body {
   position: relative;
   max-width: 1024px;
