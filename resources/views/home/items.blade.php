@@ -3,7 +3,7 @@
     <div class="row row-1">
         <div class="col-md-6 hidden-sm hidden-xs">
             <div class="phone-box">
-                <iframe src="http://sns.hey-community.com"></iframe>
+                <iframe src="http://sns.hey-community.com?at=home&noWeChatOAuth=true"></iframe>
             </div>
         </div>
 
@@ -94,10 +94,10 @@
 
         <div class="row">
             <div class="item-case text-center col-sm-6 col-md-4">
-                <iframe src="http://hxtrans.hey-community.cn"></iframe>
+                <iframe src="http://hxtrans.hey-community.cn?at=home&noWeChatOAuth=true"></iframe>
             </div>
             <div class="item-case text-center col-sm-6 col-md-4">
-                <iframe src="http://www.hey-ganzhou.com"></iframe>
+                <iframe src="http://www.hey-ganzhou.com?at=home&noWeChatOAuth=true"></iframe>
             </div>
         </div>
     </div>
