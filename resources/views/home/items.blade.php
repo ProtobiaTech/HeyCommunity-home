@@ -64,7 +64,11 @@
                     <div class="row">
                         <div class="col-xs-12">
                             新闻动态:
-                            <ul class="list-unstyled">
+                            <ul class="list-unstyled" style="margin-bottom:0;">
+                                <li>
+                                    <a>HeyCommunity V2 内测2周，即将发布</a> <sup style="color:red;">new</sup>
+                                    <span class="pull-right">09-10</span>
+                                </li>
                                 <li>
                                     <a>HeyCommunity 重构并迁移到 Ionic 2</a>
                                     <span class="pull-right">06-30</span>
