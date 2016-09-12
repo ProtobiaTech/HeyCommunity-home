@@ -45,7 +45,11 @@
 
                             randomBackgroundImg();
                             setInterval(randomBackgroundImg, 15000);
-                        })
+
+                            if (location.host !== 'www.hey-community.com') {
+                                location.assign('http://www.hey-community.com');
+                            }
+                        });
 
                         function randomBackgroundImg() {
                             var imgs = [
