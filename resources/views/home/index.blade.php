@@ -44,23 +44,24 @@
                             });
 
                             randomBackgroundImg();
-                            setInterval(randomBackgroundImg, 10000);
+                            setInterval(randomBackgroundImg, 15000);
                         })
 
                         function randomBackgroundImg() {
                             var imgs = [
-                                'http://odbxw41t6.bkt.clouddn.com/bg-imgs/1.jpg',
-                                'http://odbxw41t6.bkt.clouddn.com/bg-imgs/2.jpg',
-                                'http://odbxw41t6.bkt.clouddn.com/bg-imgs/3.jpg',
-                                'http://odbxw41t6.bkt.clouddn.com/bg-imgs/4.jpg',
-                                'http://odbxw41t6.bkt.clouddn.com/bg-imgs/5.jpg',
-                                'http://odbxw41t6.bkt.clouddn.com/bg-imgs/6.jpg',
-                                'http://odbxw41t6.bkt.clouddn.com/bg-imgs/7.jpg',
-                                'http://odbxw41t6.bkt.clouddn.com/bg-imgs/8.jpg',
-                                'http://odbxw41t6.bkt.clouddn.com/bg-imgs/9.jpg',
-                                'http://odbxw41t6.bkt.clouddn.com/bg-imgs/10.jpg',
+                                'http://cdn.hey-community.com/bg-imgs/1.jpg',
+                                'http://cdn.hey-community.com/bg-imgs/2.jpg',
+                                'http://cdn.hey-community.com/bg-imgs/3.jpg',
+                                'http://cdn.hey-community.com/bg-imgs/4.jpg',
+                                'http://cdn.hey-community.com/bg-imgs/5.jpg',
+                                'http://cdn.hey-community.com/bg-imgs/6.jpg',
+                                'http://cdn.hey-community.com/bg-imgs/7.jpg',
+                                'http://cdn.hey-community.com/bg-imgs/8.jpg',
+                                'http://cdn.hey-community.com/bg-imgs/9.jpg',
+                                'http://cdn.hey-community.com/bg-imgs/10.jpg',
                             ];
-                            var i = Math.floor(Math.random() * (imgs.length - 0 + 1)) + 0;
+
+                            var i = Math.floor(Math.random() * ((imgs.length - 1) - 0 + 1)) + 0;
                             var img = 'url(' + imgs[i] + ')';
                             $('.main-background').css('background-image', img);
                         }
