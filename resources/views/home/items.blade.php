@@ -38,16 +38,14 @@
 
                             <div style="">
                                 @if (Auth::guest())
-                                    <a class="hidden btn-create btn btn-primary btn-block" data-toggle="modal" data-target="#signUpModal" href="#home">创建我的云社区</a>
-                                    <a class="btn-create btn btn-primary btn-block">即将上线，敬请期待</a>
+                                    <a class="btn-create btn btn-primary btn-block" data-toggle="modal" data-target="#signUpModal" href="#home">创建我的云社区</a>
                                     <div style="margin-top:4px;">
                                         <a target="_blank" href="{{ url('https://github.com/dev4living/HeyCommunity') }}">获取程序代码</a>
                                         <a class="hidden" href="{{ url('/log-in') }}" class="pull-right">登录</a>
                                         <a target="_blank" href="{{ url('/bbs') }}" class="pull-right">用户社区</a>
                                     </div>
                                 @else
-                                    <a class="hidden btn-create btn btn-primary btn-block" href="{{ route('dashboard.home') }}">进入社区管理后台</a>
-                                    <a class="btn-create btn btn-primary btn-block">即将上线，敬请期待</a>
+                                    <a class="btn-create btn btn-primary btn-block" href="{{ route('dashboard.home') }}">进入社区管理后台</a>
                                     <div style="margin-top:4px;">
                                         <a target="_blank" href="{{ url('https://github.com/dev4living/HeyCommunity') }}">获取程序代码</a>
                                         <a target="_blank" href="{{ url('/bbs') }}" class="pull-right">用户社区</a>

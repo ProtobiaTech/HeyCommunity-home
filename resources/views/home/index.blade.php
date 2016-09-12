@@ -19,19 +19,27 @@
                 <div class="modal-body">
                     <!-- form js -->
                     <script>
-                        function signUpSubmit(event) {
-                            event.preventDefault();
-                            $.ajax({
-                                method: "POST",
-                                url: event.target.action,
-                                data: $(event.target).serialize(),
-                                success: function() {
-                                    location.reload();
-                                },
-                                error: function(ret) {
-                                    signUpSubmitErrorHandler(ret.responseJSON);
-                                },
-                            });
+                        function signUpSubmit(event, direct) {
+                            if (direct) {
+                                event.target.submit();
+                            } else {
+                                event.preventDefault();
+                                $.ajax({
+                                    method: "POST",
+                                    url: event.target.action,
+                                    data: $(event.target).serialize(),
+                                    success: function() {
+                                        location.reload();
+                                    },
+                                    error: function(ret) {
+                                        if (ret.status === 422) {
+                                            signUpSubmitErrorHandler(ret.responseJSON);
+                                        } else {
+                                            signUpSubmit(event, true);
+                                        }
+                                    },
+                                });
+                            }
                         }
 
                         $(function() {
@@ -47,7 +55,7 @@
                             setInterval(randomBackgroundImg, 15000);
 
                             if (location.host !== 'www.hey-community.com') {
-                                location.assign('http://www.hey-community.com');
+                                // location.assign('http://www.hey-community.com');
                             }
                         });
 
@@ -77,7 +85,6 @@
 
                             for (var field in data) {
                                 obj = $('.sign-up-form .form-group').has("input[name=" + field + "]");
-                                console.log(obj, field);
                                 obj.removeClass('has-success');
                                 obj.addClass('has-error');
                                 obj.find('.help-block').text(data[field]);
