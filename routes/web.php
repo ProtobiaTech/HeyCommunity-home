@@ -21,4 +21,10 @@ Route::get('log-out', 'TenantController@logOutHandler');
 
 Route::group(['prefix' => 'dashboard'], function() {
     Route::get('/', ['as' => 'dashboard.home', 'uses' => 'Dashboard\HomeController@index']);
+
+    //
+    // Trend
+    Route::group(['prefix' => 'trend'], function() {
+        Route::get('/', 'Dashboard\TrendController@index');
+    });
 });

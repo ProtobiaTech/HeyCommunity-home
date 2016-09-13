@@ -43,12 +43,10 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav hidden">
-                <li class="{{ Request::is('admin') ? 'active' : ''}}"><a href="{{ url('admin.home') }}">Home</a></li>
-                <li class="{{ Request::is('admin/timeline*') ? 'active' : ''}}"><a href="{{ url('admin.timeline.index') }}">Timeline</a></li>
-                <li class="hide {{ Request::is('admin/activity*') ? 'active' : ''}}"><a href="{{ url('admin.activity.index') }}">Activity</a></li>
-                <li class="{{ Request::is('admin/topic*') ? 'active' : ''}}"><a href="{{ url('admin.topic.index') }}">Topic</a></li>
-                <li class="{{ Request::is('admin/system*') ? 'active' : ''}}"><a href="{{ url('admin/system/index') }}">System Setting</a></li>
+            <ul class="nav navbar-nav">
+                <li class="{{ Request::is('dashboard') ? 'active' : ''}}"><a href="{{ url('admin.home') }}">Home</a></li>
+                <li class="{{ Request::is('dashboard/trend*') ? 'active' : ''}}"><a href="{{ url('dashboard/trend') }}">Trend</a></li>
+                <li class="{{ Request::is('dashboard/system*') ? 'active' : ''}}"><a href="{{ url('dashboard/setting') }}">System Setting</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
