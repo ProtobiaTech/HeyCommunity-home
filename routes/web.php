@@ -28,9 +28,6 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth.tenant']], functio
         Route::get('/',                 'Dashboard\DataController@index');
         Route::get('user',              'Dashboard\DataController@user');
         Route::get('timeline',          'Dashboard\DataController@timeline');
-        Route::get('timeinee-img',      'Dashboard\DataController@timeline-img');
-        Route::get('timeinee-like',     'Dashboard\DataController@timeline-like');
-        Route::get('timeinee-comment',  'Dashboard\DataController@timeline-comment');
     });
 
     //

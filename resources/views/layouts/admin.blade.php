@@ -47,7 +47,7 @@
                 <li class="{{ Request::is('dashboard') ? 'active' : ''}}"><a href="{{ url('dashboard') }}">Home</a></li>
 
                 @if (Auth::check())
-                <li class="{{ Request::is('dashboard/trend*') ? 'active' : ''}}"><a href="{{ url('dashboard/trend') }}">Trend</a></li>
+                <li class="{{ Request::is('dashboard/data*') ? 'active' : ''}}"><a href="{{ url('dashboard/data') }}">Data</a></li>
                 <li class="{{ Request::is('dashboard/setting*') ? 'active' : ''}}"><a href="{{ url('dashboard/setting') }}">Setting</a></li>
                 @endif
             </ul>
