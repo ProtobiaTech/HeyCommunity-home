@@ -23,6 +23,17 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth.tenant']], functio
     Route::get('/', ['as' => 'dashboard.home', 'uses' => 'Dashboard\HomeController@index']);
 
     //
+    // Data
+    Route::group(['prefix' => 'data'], function() {
+        Route::get('/',                 'Dashboard\DataController@index');
+        Route::get('user',              'Dashboard\DataController@user');
+        Route::get('timeline',          'Dashboard\DataController@timeline');
+        Route::get('timeinee-img',      'Dashboard\DataController@timeline-img');
+        Route::get('timeinee-like',     'Dashboard\DataController@timeline-like');
+        Route::get('timeinee-comment',  'Dashboard\DataController@timeline-comment');
+    });
+
+    //
     // Trend
     Route::group(['prefix' => 'trend'], function() {
         Route::get('/', 'Dashboard\TrendController@index');

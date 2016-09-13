@@ -168,6 +168,7 @@ return [
          */
         Collective\Html\HtmlServiceProvider::class,
         Khill\Lavacharts\Laravel\LavachartsServiceProvider::class,
+        HipsterJazzbo\Landlord\LandlordServiceProvider::class,
 
 
         /*
@@ -229,8 +230,9 @@ return [
         /**
          *
          */
-        'Form' => Collective\Html\FormFacade::class,
-        'Html' => Collective\Html\HtmlFacade::class,
+        'Form'      =>  Collective\Html\FormFacade::class,
+        'Html'      =>  Collective\Html\HtmlFacade::class,
+        'Landlord'  =>  HipsterJazzbo\Landlord\Facades\LandlordFacade::class,
     ],
 
 ];
