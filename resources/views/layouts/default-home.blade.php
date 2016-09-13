@@ -64,7 +64,7 @@
                         <a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzIwNjM5MDQ5NA==&mid=100000001&idx=1&sn=dd2021fc926d7dc32fe83feeadf396d3&scene=1&srcid=0908kgRYlY7AoVbgxrfzi3bq#rd" class="wechat-a">
                             <i class="fa fa-weixin" aria-hidden="true"></i> 微信公众号: HEY社区
                             <div class="wechat-box">
-                                <img src="http://v1.hey-community.com/images/wechat-qrcode.jpg">
+                                <img src="/assets/images/wechat-qrcode.jpg">
                             </div>
                         </a>
                     </div>

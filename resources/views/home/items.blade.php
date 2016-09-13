@@ -41,7 +41,11 @@
                                     <a class="btn-create btn btn-primary btn-block" data-toggle="modal" data-target="#signUpModal" href="#home">创建我的云社区</a>
                                     <div style="margin-top:4px;">
                                         <a target="_blank" href="{{ url('/bbs') }}" class="">用户社区</a>
-                                        <a href="{{ url('/log-in') }}" class="pull-right">登录</a>
+                                        <span class="pull-right">
+                                            <a href="" class="">忘记密码?</a>
+                                            &nbsp;&nbsp;|&nbsp;&nbsp;
+                                            <a href="{{ url('/log-in') }}" class="">登录</a>
+                                        </span>
                                     </div>
                                 @else
                                     <a class="btn-create btn btn-primary btn-block" href="{{ route('dashboard.home') }}">进入社区管理后台</a>
