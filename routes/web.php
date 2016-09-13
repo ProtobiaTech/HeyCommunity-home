@@ -27,4 +27,13 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth.tenant']], functio
     Route::group(['prefix' => 'trend'], function() {
         Route::get('/', 'Dashboard\TrendController@index');
     });
+
+    //
+    // Setting
+    Route::group(['prefix' => 'setting'], function() {
+        Route::get('/', 'Dashboard\SettingController@index');
+        Route::get('tenant-info', 'Dashboard\SettingController@tenantInfo');
+        Route::get('edit-tenant-info', 'Dashboard\SettingController@editTenantInfo');
+        Route::post('update-tenant-info', 'Dashboard\SettingController@updateTenantInfo');
+    });
 });

@@ -15,5 +15,6 @@ require('laravel-elixir-vue');
 
 elixir(mix => {
     mix.sass('app.scss')
+       .sass('app-dashboard.scss')
        .webpack('app.js');
 });
