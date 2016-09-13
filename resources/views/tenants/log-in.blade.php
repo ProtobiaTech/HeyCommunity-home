@@ -43,7 +43,7 @@
 
                         <div class="form-group">
                             <div class="col-sm-6 col-sm-offset-3">
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary">Login</button>
                             </div>
                         </div>
                     {!! Form::close() !!}
