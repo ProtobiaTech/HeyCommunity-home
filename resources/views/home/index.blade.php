@@ -29,7 +29,7 @@
                                     url: event.target.action,
                                     data: $(event.target).serialize(),
                                     success: function() {
-                                        location.reload();
+                                        location.assign('/dashboard');
                                     },
                                     error: function(ret) {
                                         if (ret.status === 422) {
