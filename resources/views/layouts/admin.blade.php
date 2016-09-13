@@ -44,9 +44,12 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="{{ Request::is('dashboard') ? 'active' : ''}}"><a href="{{ url('admin.home') }}">Home</a></li>
+                <li class="{{ Request::is('dashboard') ? 'active' : ''}}"><a href="{{ url('dashboard') }}">Home</a></li>
+
+                @if (Auth::check())
                 <li class="{{ Request::is('dashboard/trend*') ? 'active' : ''}}"><a href="{{ url('dashboard/trend') }}">Trend</a></li>
                 <li class="{{ Request::is('dashboard/system*') ? 'active' : ''}}"><a href="{{ url('dashboard/setting') }}">System Setting</a></li>
+                @endif
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
