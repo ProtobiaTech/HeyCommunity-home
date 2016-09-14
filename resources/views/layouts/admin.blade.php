@@ -9,7 +9,6 @@
     <meta name="description" content="HeyCommunity 是为中小社群量身打造的线上社区解决方案，其构建的 app 可适用于 iOS / android / windowPhone / Browser 等终端。让人欣喜的是其 app 是开源的 GPLv3 授权，我们为有需要的用户提供定制开发和运营服务">
 
     <link href="{{ asset('/bower-assets/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('/bower-assets/bootswatch/flatly/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('/bower-assets/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/app-dashboard.css') }}" rel="stylesheet">
     <script src="{{ asset('bower-assets/jquery/dist/jquery.min.js') }}"></script>
@@ -58,7 +57,7 @@
                 <li class="{{ Request::is('sign-up') ? 'active' : ''}}"><a href="{{ url('/sign-up') }}">SignUp</a></li>
                 <li class="{{ Request::is('log-in') ? 'active' : ''}}"><a href="{{ url('/log-in') }}">Login</a></li>
                 @else
-                <li class="{{ Request::is('guild') ? 'active' : ''}}"><a href="{{ url('/Guild') }}">Guide</a></li>
+                <li class="{{ Request::is('dashboard/guide*') ? 'active' : ''}}"><a href="{{ url('/dashboard/guide') }}"><span class="text-danger"><i class="glyphicon glyphicon-lamp"></i> Guide</span></a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->site_name }} <span class="caret"></span></a>
                     <ul class="dropdown-menu">

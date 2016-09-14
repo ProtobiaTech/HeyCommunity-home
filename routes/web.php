@@ -37,6 +37,13 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth.tenant']], functio
     });
 
     //
+    // Guide
+    Route::group(['prefix' => 'guide'], function() {
+        Route::get('/', 'Dashboard\GuideController@index');
+        Route::get('getting-started', 'Dashboard\GuideController@gettingStarted');
+    });
+
+    //
     // Setting
     Route::group(['prefix' => 'setting'], function() {
         Route::get('/', 'Dashboard\SettingController@index');
