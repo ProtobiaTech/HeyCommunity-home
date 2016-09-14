@@ -9,6 +9,7 @@
     <meta name="description" content="HeyCommunity 是为中小社群量身打造的线上社区解决方案，其构建的 app 可适用于 iOS / android / windowPhone / Browser 等终端。让人欣喜的是其 app 是开源的 GPLv3 授权，我们为有需要的用户提供定制开发和运营服务">
 
     <link href="{{ asset('/bower-assets/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/bower-assets/bootswatch/flatly/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('/bower-assets/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/app-dashboard.css') }}" rel="stylesheet">
     <script src="{{ asset('bower-assets/jquery/dist/jquery.min.js') }}"></script>
@@ -38,7 +39,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ route('home') }}">Hey Community</a>
+            <a class="navbar-brand" href="{{ route('home') }}">HeyCommunity <sup>V2.beta</sup></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
