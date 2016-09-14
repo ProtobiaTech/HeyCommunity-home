@@ -19,7 +19,7 @@ Route::post('sign-up', 'TenantController@signUpHandler');
 Route::get('log-out', 'TenantController@logOutHandler');
 
 
-Route::group(['prefix' => 'dashboard', 'middleware' => ['auth.tenant']], function() {
+Route::group(['prefix' => 'dashboard', 'middleware' => ['auth.tenant', 'tenantDataFilter']], function() {
     Route::get('/', ['as' => 'dashboard.home', 'uses' => 'Dashboard\HomeController@index']);
 
     //
