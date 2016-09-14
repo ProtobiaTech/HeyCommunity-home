@@ -33,7 +33,7 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth.tenant']], functio
     //
     // Trend
     Route::group(['prefix' => 'trend'], function() {
-        Route::get('/', 'Dashboard\TrendController@index');
+        Route::get('get-trend', 'Dashboard\TrendController@getTrend');
     });
 
     //
