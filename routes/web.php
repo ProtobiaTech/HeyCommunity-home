@@ -23,6 +23,12 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth.tenant', 'tenantDa
     Route::get('/', ['as' => 'dashboard.home', 'uses' => 'Dashboard\HomeController@index']);
 
     //
+    // Weathercock
+    Route::group(['prefix' => 'weathercock'], function() {
+        Route::get('trend', 'Dashboard\WeathercockController@trend');
+    });
+
+    //
     // Data
     Route::group(['prefix' => 'data'], function() {
         Route::get('/',                 'Dashboard\DataController@index');
@@ -33,7 +39,8 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth.tenant', 'tenantDa
     //
     // Trend
     Route::group(['prefix' => 'trend'], function() {
-        Route::get('get-trend', 'Dashboard\TrendController@getTrend');
+        Route::get('my-trend', 'Dashboard\TrendController@myTrend');
+        Route::get('all-tenant-trend', 'Dashboard\TrendController@allTenantTrend');
     });
 
     //

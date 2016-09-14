@@ -24,7 +24,7 @@
 
         $.ajax({
             type: 'GET',
-            url: '/dashboard/trend/my-trend',
+            url: '/dashboard/trend/all-tenant-trend',
             success: function(response, status, xhr) {
                 renderTrendChart(response);
             },
