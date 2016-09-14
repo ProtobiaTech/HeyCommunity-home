@@ -58,6 +58,7 @@
                 <li class="{{ Request::is('sign-up') ? 'active' : ''}}"><a href="{{ url('/sign-up') }}">SignUp</a></li>
                 <li class="{{ Request::is('log-in') ? 'active' : ''}}"><a href="{{ url('/log-in') }}">Login</a></li>
                 @else
+                <li class="{{ Request::is('guild') ? 'active' : ''}}"><a href="{{ url('/Guild') }}">Guide</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->site_name }} <span class="caret"></span></a>
                     <ul class="dropdown-menu">
