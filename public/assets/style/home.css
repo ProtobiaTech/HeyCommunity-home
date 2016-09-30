@@ -165,8 +165,8 @@ body {
     #main-body #section-home .panel-info form .form-group .col-sm-12 {
       margin-bottom: 8px; }
   #main-body #section-cases iframe {
-    border: 2px solid #ddd;
-    height: 500px;
+    border: 0px solid #ddd;
+    height: 520px;
     width: 100%; }
 
 #signUpModal {
