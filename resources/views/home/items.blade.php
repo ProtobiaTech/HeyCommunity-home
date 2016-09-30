@@ -149,16 +149,23 @@
             嗯，我们先保持神秘
         </p>
 
-        <div style="margin-top:30px" class="h4">联系方式</div>
+        <div style="margin-top:30px" class="h4">联系方式 <small>(如有任何需要，请联系我们)</small></div>
         <div>
             <div style="font-size:16px; margin-top:4px;">罗德</div>
             Email: supgeek.rod(AT)gmail.com <br>
             Phone: 170-9040-2884 <br>
             WeChat: 170-9040-2884 <br>
             QQ群: 242078519 <br>
+        </div>
 
-            <br>
-            如果任何需要，请联系我们
+        <div style="margin-top:30px" class="h4">资金捐赠</div>
+        <div>
+            <p>
+            从15年12月一路磕磕绊绊至今，执著地在研发这款免费的开源社区软件 <br>
+            如果它帮助到了你，我们很高兴。如果你愿意可以用以下方式支持产品的研发。
+            </p>
+
+            <img class="img-rounded" src="assets/images/donate.jpg" style="width:240px; opacity:0.8;">
         </div>
     </div>
 </div>
