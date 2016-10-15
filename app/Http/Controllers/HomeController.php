@@ -16,4 +16,44 @@ class HomeController extends Controller
     {
         return view('home.index');
     }
+
+    /**
+     * Display feature page
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function feature()
+    {
+        return view('home.feature');
+    }
+
+    /**
+     * Display business page
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function business()
+    {
+        return view('home.business');
+    }
+
+    /**
+     * Display open-sources page
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function openSources()
+    {
+        return view('home.open-sources');
+    }
+
+    /**
+     * Display about-us page
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function abuotUs()
+    {
+        return view('home.about-us');
+    }
 }

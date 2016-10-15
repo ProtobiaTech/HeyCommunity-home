@@ -67,10 +67,10 @@
 
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><a class="nav-link" href="docs/index.html">功能特性</a></li>
-        <li><a class="nav-link" href="docs/index.html">云社区</a></li>
-        <li><a class="nav-link" href="docs/index.html">商业解决方案</a></li>
-        <li><a class="nav-link" href="docs/index.html">开源软件</a></li>
+        <li><a class="nav-link" href="{{ url('/feature') }}">功能特性</a></li>
+        <li><a class="nav-link" href="{{ url('/') }}">云社区</a></li>
+        <li><a class="nav-link" href="{{ url('business') }}">商业解决方案</a></li>
+        <li><a class="nav-link" href="{{ url('open-sources') }}">开源软件</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle nav-link " data-toggle="dropdown" role="button" aria-expanded="false">更多 <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
@@ -181,8 +181,8 @@
   <nav class="base-links">
     <dl>
       <dt>我们</dt>
-      <dd><a href="docs/index.html">关于我们</a></dd>
-      <dd><a href="docs/index.html">工作机会</a></dd>
+      <dd><a href="/about-us">关于我们</a></dd>
+      <dd><a href="/jobs">工作机会</a></dd>
     </dl>
 
     <dl>

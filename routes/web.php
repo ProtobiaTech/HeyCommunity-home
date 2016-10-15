@@ -12,6 +12,10 @@
 */
 
 Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
+Route::get('feature', ['as' => 'home-feature', 'uses' => 'HomeController@feature']);
+Route::get('business', ['as' => 'home-business', 'uses' => 'HomeController@business']);
+Route::get('open-sources', ['as' => 'home-open-sources', 'uses' => 'HomeController@openSources']);
+
 Route::get('log-in', 'TenantController@logIn');
 Route::post('log-in', 'TenantController@logInHandler');
 Route::get('sign-up', 'TenantController@signUp');
