@@ -71,8 +71,6 @@
         <li><a class="nav-link" href="docs/index.html">云社区</a></li>
         <li><a class="nav-link" href="docs/index.html">商业解决方案</a></li>
         <li><a class="nav-link" href="docs/index.html">开源软件</a></li>
-        <li><a class="nav-link" href="docs/index.html">交流论坛</a></li>
-        <li><a class="nav-link" href="docs/index.html">博客</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle nav-link " data-toggle="dropdown" role="button" aria-expanded="false">更多 <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
@@ -171,6 +169,10 @@
     </div>
   </div>
 </div>
+
+
+<!-- content -->
+@yield('content')
 
 
 <!-- footer -->

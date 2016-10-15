@@ -1,159 +1,70 @@
 @extends('layouts.default-home')
 
 @section('content')
-    <div id="main-carousel" class="carousel slide" data-interval="false" data-ride="carousel">
-        <div class="carousel-inner" role="listbox">
-            @include('home.items')
-        </div>
+<div id="learn-more">
+  <div class="desc-row">
+
+    <h3>
+        绑定微信公众号
+    </h3>
+    <p>
+        以 WebApp 的形式运行在微信中，享受 微信授权登录 和 微信消息推送的便利
+    </p>
+
+  </div>
+
+  <div class="feature-row img-performance">
+    <h4>一分钟上线</h4>
+    <p>
+      Speed is important. So important that you only notice when it isn't there. Ionic is
+      built to perform and behave great on the latest mobile devices. Designed with best practices like efficient <span class="feature-row-strong">hardware accelerated transitions</span>, and <span class="feature-row-strong">touch-optimized gestures</span>,
+      one thing is for sure: You'll be impressed.
+    </p>
+  </div>
+
+  <div class="feature-row img-angular img-right">
+    <h4>微信授权登录</h4>
+    <p>
+      <span class="feature-row-strong">A match made in heaven.</span> Ionic builds on top of Angular
+      to create a powerful SDK well-suited for building rich and robust mobile apps for the app store and the mobile web. Ionic not only looks nice, but its core architecture is built for <span class="feature-row-strong">serious app development</span>.
+    </p>
+  </div>
+
+  <div class="feature-row img-native">
+    <h4>微信消息推送</h4>
+    <p>
+      Ionic follows standard native mobile app UI guidelines and uses native SDKs, bringing the UI standards and device features of native apps together with the full power and flexibility of the open web.
+
+      Ionic uses <a href="http://cordova.apache.org/" target="_blank">Cordova</a> or
+      <a href="http://phonegap.com/" target="_blank">Phonegap</a> to deploy natively, or runs in the browser as a Progressive Web App. <span class="feature-row-strong">Develop once, deploy <em>everywhere</em></span>.
+    </p>
+  </div>
+</div>
+
+
+
+<div class="features">
+  <div class="container">
+    <h2>开始注册</h2>
+    <h4 style="margin-bottom:20px;">
+      You'll find a suite of mobile development tools and resources at your disposal that make <br>
+      Ionic the complete mobile dev package. It's the best way to build apps. Period.
+    </h4>
+    <div class="row">
+      <div class="col-md-offset-3 col-md-6">
+        <form class="">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="hide form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+
+          <div class="form-group">
+            <button class="btn btn-primary btn-block" type="submit">提交</button>
+          </div>
+        </form>
+      </div>
     </div>
-    <div class="main-carousel-bg"></div>
-
-
-    <div id="signUpModal" class="modal fade">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <h4 class="modal-title">创建一个云社区</h4>
-                </div>
-                <div class="modal-body">
-                    <!-- form js -->
-                    <script>
-                        function signUpSubmit(event) {
-                            event.preventDefault();
-                            $.ajax({
-                                method: "POST",
-                                url: event.target.action,
-                                data: $(event.target).serialize(),
-                                success: function() {
-                                    location.reload();
-                                },
-                                error: function(ret) {
-                                    signUpSubmitErrorHandler(ret.responseJSON);
-                                },
-                            });
-                        }
-
-                        $(function() {
-                            $('.sign-up-form input').on('change', function(event) {
-                                obj = $('.sign-up-form .form-group').has(event.target);
-                                obj.removeClass('has-success');
-                                obj.removeClass('has-error');
-                                obj.find('.help-block').text('');
-                                obj.find('.help-block').hide();
-                            });
-
-                            randomBackgroundImg();
-                            setInterval(randomBackgroundImg, 15000);
-
-                            if (location.host !== 'www.hey-community.com') {
-                                // location.assign('http://www.hey-community.com');
-                            }
-                        });
-
-                        function randomBackgroundImg() {
-                            var imgs = [
-                                'http://cdn.hey-community.com/bg-imgs/1.jpg',
-                                'http://cdn.hey-community.com/bg-imgs/2.jpg',
-                                'http://cdn.hey-community.com/bg-imgs/3.jpg',
-                                'http://cdn.hey-community.com/bg-imgs/4.jpg',
-                                'http://cdn.hey-community.com/bg-imgs/5.jpg',
-                                'http://cdn.hey-community.com/bg-imgs/6.jpg',
-                                'http://cdn.hey-community.com/bg-imgs/7.jpg',
-                                'http://cdn.hey-community.com/bg-imgs/8.jpg',
-                                'http://cdn.hey-community.com/bg-imgs/9.jpg',
-                                'http://cdn.hey-community.com/bg-imgs/10.jpg',
-                            ];
-
-                            var i = Math.floor(Math.random() * ((imgs.length - 1) - 0 + 1)) + 0;
-                            var img = 'url(' + imgs[i] + ')';
-                            $('.main-background').css('background-image', img);
-                        }
-
-                        function signUpSubmitErrorHandler(data) {
-                            $('.sign-up-form .form-group').removeClass('has-error');
-                            $('.sign-up-form .form-group').addClass('has-success');
-                            $('.sign-up-form .form-group .help-block').hide();
-
-                            for (var field in data) {
-                                obj = $('.sign-up-form .form-group').has("input[name=" + field + "]");
-                                console.log(obj, field);
-                                obj.removeClass('has-success');
-                                obj.addClass('has-error');
-                                obj.find('.help-block').text(data[field]);
-                                obj.find('.help-block').show();
-                            }
-                        }
-                    </script>
-
-                    {!! Form::open(array('url' => '/sign-up', 'method' => 'post', 'class' => 'sign-up-form form form-horizontal', 'onsubmit' => 'signUpSubmit(event)')) !!}
-                    <div class="container-fluid">
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label" for="title">应用名称</label>
-                            <div class="col-sm-9">
-                                <input class="form-control" type="text" name="site_name" value="{{ old('site_name') }}" placeholder="应用名称">
-                                <span class="help-block"></span>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label" for="title">域名</label>
-                            <div class="col-sm-9">
-                                <div class="input-group">
-                                    <span class="input-group-addon" id="sizing-addon1">http://</span>
-                                    <input class="form-control" type="text" name="domain" value="{{ old('domain') }}" placeholder="site-domain.com">
-                                </div>
-                                <span class="help-block"></span>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label" for="title">子域名</label>
-                            <div class="col-sm-9">
-                                <div class="input-group">
-                                    <span class="input-group-addon" id="sizing-addon1">http://</span>
-                                    <input class="form-control" type="text" name="sub_domain" value="{{ old('sub_domain') }}" placeholder="sub-domain">
-                                    <span class="input-group-addon" id="sizing-addon1">.hey-community.com</span>
-                                </div>
-                                <span class="help-block"></span>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label" for="title">管理员邮箱</label>
-                            <div class="col-sm-9">
-                                <input class="form-control" type="text" name="email" value="{{ old('email') }}" placeholder="admin@hey-community.com">
-                                <span class="help-block"></span>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label" for="title">管理员手机</label>
-                            <div class="col-sm-9">
-                                <input class="form-control" type="text" name="phone" value="{{ old('phone') }}" placeholder="13112341234">
-                                <span class="help-block"></span>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label" for="title">管理员密码</label>
-                            <div class="col-sm-9">
-                                <input class="form-control" type="password" name="password" value="{{ old('password') }}" placeholder="管理员密码">
-                                <span class="help-block"></span>
-                            </div>
-                        </div>
-
-
-
-                        <div class="form-group">
-                            <div class="col-sm-9 col-sm-offset-3">
-                                <button type="submit" class="btn btn-primary btn-block">提交</button>
-                            </div>
-                        </div>
-                    </div>
-                    {!! Form::close() !!}
-                </div>
-            </div>
-        </div>
-    </div>
+  </div>
+</div>
 @endsection
