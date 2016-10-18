@@ -13,7 +13,7 @@
   <link rel="stylesheet" type="text/css" href="css/slick.css"/>
   <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="{{ url('bower-assets/jquery/dist/jquery.min.js') }}"></script>
   <script>
     $(function() {
       setTimeout(function(){
@@ -67,8 +67,8 @@
 
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><a class="nav-link" href="{{ url('/feature') }}">功能特性</a></li>
-        <li><a class="nav-link" href="{{ url('/') }}">云社区</a></li>
+        <li><a class="nav-link" href="{{ url('/') }}">功能特性</a></li>
+        <li><a class="nav-link" href="{{ url('/cloud') }}">云社区</a></li>
         <li><a class="nav-link" href="{{ url('business') }}">商业解决方案</a></li>
         <li><a class="nav-link" href="{{ url('open-sources') }}">开源软件</a></li>
         <li class="dropdown">
@@ -77,6 +77,14 @@
             <div class="arrow-up"></div>
             <li><a class="nav-link" href="http://showcase.ionicframework.com/">工作机会</a></li>
             <li><a class="nav-link" href="http://showcase.ionicframework.com/">关于我们</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle nav-link " data-toggle="dropdown" role="button" aria-expanded="false">注册或登录 <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="arrow-up"></div>
+            <li><a class="nav-link" href="http://showcase.ionicframework.com/">工作机会</a></li>
+            <li><a class="nav-link" href="http://showcase.ionicframework.com/"></a></li>
           </ul>
         </li>
       </ul>
@@ -96,13 +104,41 @@
               1分钟上线你的社区
             </h1>
             <h3>
-              再小的社群，都需要有一个独立的功能多样的线上社区，便于社群成员之间的交流与互动。
+              再小的社群，都需要有一个独立且功能多样的线上社区，让社群成员之间的交流与互动更加便捷和高效 <br><br>
+
+              在微信中运行云社区，享受微信授权登录和微信消息推送的便利
             </h3>
             <p class="btn-row">
               <a id="repo-download" class="btn btn-primary btn-download desktop-btn" href="getting-started/index.html">开始创建云社区</a>
             </p>
             <p class="version-text">
-              v2.0.0-beta.1, 于 2016-05-12 上线
+              v2.0.0-beta.1, 于 2016-05-12 发布
+            </p>
+          </div>
+          <div class="col-sm-6 feature-img one">
+            <a href="http://view.ionic.io/" target="_blank"><img class="app-icon one" src="img/homepage/ionicview-icon_2x.png"><span class="demo-link">Ionic View</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide horizontal-gradient">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 fadeIn">
+            <h1>
+              运行在所有平台
+            </h1>
+            <h3>
+              再小的社群，都需要有一个独立且功能多样的线上社区，让社群成员之间的交流与互动更加便捷和高效 <br><br>
+
+              在微信中运行云社区，享受微信授权登录和微信消息推送的便利
+            </h3>
+            <p class="btn-row">
+              <a id="repo-download" class="btn btn-primary btn-download desktop-btn" href="getting-started/index.html">开始创建云社区</a>
+            </p>
+            <p class="version-text">
+              v2.0.0-beta.1, 于 2016-05-12 发布
             </p>
           </div>
           <div class="col-sm-6 feature-img one">
@@ -137,7 +173,9 @@
           <div class="col-sm-6 fadeIn">
             <h1>开放</h1>
             <h3>
-              HeyCommunity 遵循GPL v3 免费开源 <br>
+              HeyCommunity 遵循GPL v3 开放源代码 <br>
+              你可以基于它构建自己的产品，并且用于商业用途 <br><br>
+              一切以用户利益为先，得利于我们开放的胸襟
             </h3>
             <p class="btn-row">
               <a class="btn btn-primary btn-download desktop-btn" href="http://market.ionic.io/" target="_blank">了解 HeyCommunity 功能特性</a>
@@ -158,11 +196,12 @@
           <li><a href="https://github.com/driftyco/ionic" target="_blank"><i class="ion-social-github"></i> <span id="gh-stargazers"></span> stars</a></li>
           <li><a href="https://github.com/driftyco/ionic" target="_blank"><i class="ion-fork-repo"></i> <span id="gh-forks"></span> forks</a></li>
           <li><a href="https://twitter.com/IonicFramework" target="_blank"><i class="ion-social-twitter"></i> <span id="tw-followers">Twitter</span></a></li>
+          <li><a href="">微信公众号</a></li>
         </ul>
         <form action="http://codiqa.createsend.com/t/t/s/jytylh/" method="post" class="input-group col-md-5">
-          <input name="cm-jytylh-jytylh" class="form-control" type="email" placeholder="Enter your email for the latest ionic news" required />
+          <input name="cm-jytylh-jytylh" class="form-control" type="email" placeholder="通过电子邮箱，订阅我们的动态" required />
           <span class="input-group-btn">
-            <button class="btn btn-default" type="submit">Email me!</button>
+            <button class="btn btn-default" type="submit">订阅</button>
           </span>
         </form>
       </div>
@@ -180,6 +219,25 @@
   <!-- -->
   <nav class="base-links">
     <dl>
+      <dt>产品</dt>
+      <dd><a href="">云社区</a></dd>
+      <dd><a href="">商业版</a></dd>
+      <dd><a href="">开源版</a></dd>
+    </dl>
+
+    <dl>
+      <dt>服务</dt>
+      <dd><a href="">技术服务</a></dd>
+      <dd><a href="">运营服务</a></dd>
+    </dl>
+
+    <dl>
+      <dt>协议</dt>
+      <dd><a href="/about-us">用户协议</a></dd>
+      <dd><a href="/jobs">隐私承诺</a></dd>
+    </dl>
+
+    <dl>
       <dt>我们</dt>
       <dd><a href="/about-us">关于我们</a></dd>
       <dd><a href="/jobs">工作机会</a></dd>
@@ -187,8 +245,8 @@
 
     <dl>
       <dt>开放源代码</dt>
-      <dd><a href="docs/index.html">HeyCommunity</a></dd>
-      <dd><a href="docs/index.html">GPLv3 License</a></dd>
+      <dd><a href="">HeyCommunity@Github</a></dd>
+      <dd><a href="">GPLv3 License</a></dd>
     </dl>
   </nav>
 
@@ -197,14 +255,14 @@
   <div class="newsletter row">
     <div class="newsletter-container">
       <div class="col-sm-7">
-        <div class="newsletter-text">Stay in the loop</div>
-        <div class="sign-up">Sign up to receive emails for the latest updates, features, and news on the framework.</div>
+        <div class="newsletter-text">与我们保持联系</div>
+        <div class="sign-up">通过电子邮箱，可以在第一时间获取 产品更新 / 产品研发计划 / 公司动态 等信息</div>
       </div>
 
       <form action="http://codiqa.createsend.com/t/t/s/jytylh/" method="post" class="input-group col-sm-5">
         <input id="fieldEmail" name="cm-jytylh-jytylh" class="form-control" type="email" placeholder="Email" required />
         <span class="input-group-btn">
-          <button class="btn btn-default" type="submit">Subscribe</button>
+          <button class="btn btn-default" type="submit">订阅</button>
         </span>
       </form>
     </div>
@@ -220,7 +278,7 @@
         and
         <a href="http://angular.io" target="_blank">Angular</a>
         <span>|</span>
-        &copy; 2015-2016 <a href="http://ionic.io/about">Protobia.tech</a>
+        &copy;2016 <a target="_blank" href="http://www.protobia.tech">Protobia.tech</a>
       </p>
     </div>
   </div>

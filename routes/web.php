@@ -12,7 +12,7 @@
 */
 
 Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
-Route::get('feature', ['as' => 'home-feature', 'uses' => 'HomeController@feature']);
+Route::get('cloud', ['as' => 'home-cloud', 'uses' => 'HomeController@cloud']);
 Route::get('business', ['as' => 'home-business', 'uses' => 'HomeController@business']);
 Route::get('open-sources', ['as' => 'home-open-sources', 'uses' => 'HomeController@openSources']);
 

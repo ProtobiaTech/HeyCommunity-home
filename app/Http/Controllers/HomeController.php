@@ -22,9 +22,9 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function feature()
+    public function cloud()
     {
-        return view('home.feature');
+        return view('home.cloud');
     }
 
     /**
