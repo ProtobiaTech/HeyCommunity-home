@@ -22,6 +22,16 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function login()
+    {
+        return view('home.login');
+    }
+
+    /**
+     * Display feature page
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function cloud()
     {
         return view('home.cloud');

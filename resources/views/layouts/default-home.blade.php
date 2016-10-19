@@ -75,7 +75,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ url('/') }}">功能特性</a></li>
         <li><a class="nav-link {{ Request::is('cloud') ? 'active' : '' }}" href="{{ url('/cloud') }}">云社区</a></li>
-        <li><a class="nav-link {{ Request::is('business') ? 'active' : '' }}" href="{{ url('business') }}">商业解决方案</a></li>
+        <li class="hide"><a class="nav-link {{ Request::is('business') ? 'active' : '' }}" href="{{ url('business') }}">商业解决方案</a></li>
         <li><a class="nav-link {{ Request::is('open-sources') ? 'active' : '' }}" href="{{ url('open-sources') }}">开源软件</a></li>
         <li><a class="nav-link {{ Request::is('about-us') ? 'active' : '' }}" href="{{ url('about-us') }}">关于我们</a></li>
 
@@ -104,7 +104,7 @@
     <dl>
       <dt>产品</dt>
       <dd><a href="{{ url('cloud') }}">云社区</a></dd>
-      <dd><a href="{{ url('business') }}">商业解决方案</a></dd>
+      <dd class="hide"><a href="{{ url('business') }}">商业解决方案</a></dd>
       <dd><a href="{{ url('open-sources') }}">开源软件</a></dd>
     </dl>
 
