@@ -48,11 +48,21 @@ class HomeController extends Controller
     }
 
     /**
+     * Display jobs page
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function jobs()
+    {
+        return view('home.jobs');
+    }
+
+    /**
      * Display about-us page
      *
      * @return \Illuminate\Http\Response
      */
-    public function abuotUs()
+    public function aboutUs()
     {
         return view('home.about-us');
     }

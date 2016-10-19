@@ -1,6 +1,123 @@
 @extends('layouts.default-home')
 
 @section('content')
+<div class="container content-container">
+  <!-- -->
+  <div id="slider" class="primary-row">
+    <div class="slide horizontal-gradient">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 fadeIn">
+            <h1>
+              1分钟上线你的社区
+            </h1>
+            <h3>
+              再小的社群，都需要有一个独立且功能多样的线上社区，让社群成员之间的交流与互动更加便捷和高效 <br><br>
+
+              在微信中运行云社区，享受微信授权登录和微信消息推送的便利
+            </h3>
+            <p class="btn-row">
+              <a id="repo-download" class="btn btn-primary btn-download desktop-btn" href="getting-started/index.html">开始创建云社区</a>
+            </p>
+            <p class="version-text">
+              v2.0.0-beta.1, 于 2016-05-12 发布
+            </p>
+          </div>
+          <div class="col-sm-6 feature-img one">
+            <a href="http://view.ionic.io/" target="_blank"><img class="app-icon one" src="ionic-assets/img/homepage/ionicview-icon_2x.png"><span class="demo-link">Ionic View</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide horizontal-gradient">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 fadeIn">
+            <h1>
+              运行在所有平台
+            </h1>
+            <h3>
+              再小的社群，都需要有一个独立且功能多样的线上社区，让社群成员之间的交流与互动更加便捷和高效 <br><br>
+
+              在微信中运行云社区，享受微信授权登录和微信消息推送的便利
+            </h3>
+            <p class="btn-row">
+              <a id="repo-download" class="btn btn-primary btn-download desktop-btn" href="getting-started/index.html">开始创建云社区</a>
+            </p>
+            <p class="version-text">
+              v2.0.0-beta.1, 于 2016-05-12 发布
+            </p>
+          </div>
+          <div class="col-sm-6 feature-img one">
+            <a href="http://view.ionic.io/" target="_blank"><img class="app-icon one" src="ionic-assets/img/homepage/ionicview-icon_2x.png"><span class="demo-link">Ionic View</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide slide-market">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 fadeIn">
+            <h1>强大</h1>
+            <h3>
+              HeyCommunity 能够运行在 iOS / Android / Browser 等平台 <br>
+              做为微信 WebApp 使用，可体验到微信消息推送、微信授权登录等功能
+            </h3>
+            <p class="btn-row">
+              <a class="btn btn-primary btn-download desktop-btn" href="http://market.ionic.io/" target="_blank">了解 HeyCommunity 功能特性</a>
+              <a class="btn btn-primary btn-download mobile-btn" href="http://market.ionic.io/" target="_blank">了解 HeyCommunity 功能特性</a>
+            </p>
+          </div>
+          <div class="col-sm-6 feature-img img-loaded"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide slide-market">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 fadeIn">
+            <h1>开放</h1>
+            <h3>
+              HeyCommunity 遵循GPL v3 开放源代码 <br>
+              你可以基于它构建自己的产品，并且用于商业用途 <br><br>
+              一切以用户利益为先，得利于我们开放的胸襟
+            </h3>
+            <p class="btn-row">
+              <a class="btn btn-primary btn-download desktop-btn" href="http://market.ionic.io/" target="_blank">了解 HeyCommunity 功能特性</a>
+              <a class="btn btn-primary btn-download mobile-btn" href="http://market.ionic.io/" target="_blank">了解 HeyCommunity 功能特性</a>
+            </p>
+          </div>
+          <div class="col-sm-6 feature-img img-loaded"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- -->
+  <div class="utility-bar">
+    <div class="container">
+      <div class="row">
+        <ul class="social-row ionic col-md-7">
+          <li><a href="https://github.com/driftyco/ionic" target="_blank"><i class="ion-social-github"></i> <span id="gh-stargazers"></span> stars</a></li>
+          <li><a href="https://github.com/driftyco/ionic" target="_blank"><i class="ion-fork-repo"></i> <span id="gh-forks"></span> forks</a></li>
+          <li><a href="https://twitter.com/IonicFramework" target="_blank"><i class="ion-social-twitter"></i> <span id="tw-followers">Twitter</span></a></li>
+          <li><a href="">微信公众号</a></li>
+        </ul>
+        <form action="http://codiqa.createsend.com/t/t/s/jytylh/" method="post" disabled class="input-group col-md-5">
+          <input disabled name="cm-jytylh-jytylh" class="form-control" type="email" placeholder="通过电子邮箱，订阅我们的动态" required />
+          <span class="input-group-btn">
+            <button disabled class="btn btn-default" type="submit">订阅</button>
+          </span>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <div id="learn-more">
   <div class="desc-row">
 
