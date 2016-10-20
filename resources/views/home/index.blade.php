@@ -9,7 +9,7 @@
         <div class="row">
           <div class="col-sm-6 fadeIn">
             <h1>
-              1分钟开启你的社区
+              1分钟开启你的云社区
             </h1>
             <h3>
               再小的社群，都需要有一个独立且功能多样的线上社区，让社群成员之间的交流与互动更加便捷和高效 <br><br>
@@ -23,7 +23,7 @@
               v2.0.0-beta.1, 于 2016-05-12 发布
             </p>
           </div>
-          <div class="col-sm-6 feature-img one">
+          <div class="col-sm-6 feature-img one" style="background-image: url(/ionic-assets/img/homepage/focus-1.png)">
             <a href="http://demo.hey-community.com" target="_blank">
               <img style="width:84px; height:84px; border-radius:8px; opacity:0.7;" class="app-icon one" src="assets/images/logo.png">
               <span class="demo-link" style="bottom:45px; font-size:12px;">产品演示</span>
@@ -49,17 +49,17 @@
               <a class="btn btn-primary btn-download mobile-btn" href="#feature" target="_blank">了解 HeyCommunity 功能特性</a>
             </p>
           </div>
-          <div class="col-sm-6 feature-img one">
+          <div class="col-sm-6 feature-img one" style="background-image: url(/ionic-assets/img/homepage/focus-2.png)">
             <a href="http://demo.hey-community.com" target="_blank">
-              <img class="app-icon one" src="assets/images/logo.png">
-              <span class="demo-link">产品演示</span>
+              <img style="width:84px; height:84px; border-radius:8px; opacity:0.7;" class="app-icon one" src="assets/images/logo.png">
+              <span class="demo-link" style="bottom:45px; font-size:12px;">产品演示</span>
             </a>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="slide slide-market">
+    <div class="slide slide-windows">
       <div class="container">
         <div class="row">
           <div class="col-sm-6 fadeIn">
