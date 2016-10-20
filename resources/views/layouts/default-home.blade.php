@@ -67,7 +67,7 @@
     <div class="navbar-header">
       <h1 style="padding: 20px 0 0;">
         <a href="/" style="color:#fff;">HeyCommunity</a>
-        <small style="color:#ddd;">线上社区解决方案</small>
+        <small style="color:#eee;">线上社区解决方案</small>
       </h1>
     </div>
 
@@ -79,14 +79,25 @@
         <li><a class="nav-link {{ Request::is('open-sources') ? 'active' : '' }}" href="{{ url('open-sources') }}">开源软件</a></li>
         <li><a class="nav-link {{ Request::is('about-us') ? 'active' : '' }}" href="{{ url('about-us') }}">关于我们</a></li>
 
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle nav-link " data-toggle="dropdown" role="button" aria-expanded="false">注册/登录 <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <div class="arrow-up"></div>
-            <li><a class="nav-link" href="{{ url('cloud') }}">注册云社区</a></li>
-            <li><a class="nav-link" href="{{ url('login') }}">登录</a></li>
-          </ul>
-        </li>
+        @if (Auth::check())
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle nav-link " data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->site_name }} <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <div class="arrow-up"></div>
+              <li><a class="nav-link" href="{{ url('dashboard') }}">管理后台</a></li>
+              <li><a class="nav-link" href="{{ url('logout') }}">退出</a></li>
+            </ul>
+          </li>
+        @else
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle nav-link " data-toggle="dropdown" role="button" aria-expanded="false">注册/登录 <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <div class="arrow-up"></div>
+              <li><a class="nav-link" href="{{ url('login') }}">登录</a></li>
+              <li><a class="nav-link" href="{{ url('cloud') }}">注册云社区</a></li>
+            </ul>
+          </li>
+        @endif
       </ul>
     </div>
   </div>
@@ -165,3 +176,4 @@
 <script src="ionic-assets/js/sitec4ca.js?1"></script>
 </body>
 </html>
+              <a href="#" class="dropdown-toggle nav-link " data-toggle="dropdown" role="button" aria-expanded="false">注册/登录 <span class="caret"></span></a>
