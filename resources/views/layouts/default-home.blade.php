@@ -65,10 +65,13 @@
 <nav class="navbar navbar-default horizontal-gradient" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <h1 style="padding: 20px 0 0;">
-        <a href="/" style="color:#fff;">HeyCommunity</a>
-        <small style="color:#eee;">线上社区解决方案</small>
-      </h1>
+      <a style="font-family: AvenirNextLTPro-Regular, 'Helvetica Neue', Helvetica, Arial, sans-serif; padding-top:20px; font-size:32px; color:#fff; opacity:1; line-height:1em;" class="navbar-brand" href="/">
+        HeyCommunity
+        <small style="color:#eee; font-size:16px;">线上社区解决方案</small>
+      </a>
+      <button type="button" class="navbar-toggle button ionic" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <i class="icon ion-navicon"></i>
+      </button>
     </div>
 
     <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -176,4 +179,3 @@
 <script src="ionic-assets/js/sitec4ca.js?1"></script>
 </body>
 </html>
-              <a href="#" class="dropdown-toggle nav-link " data-toggle="dropdown" role="button" aria-expanded="false">注册/登录 <span class="caret"></span></a>
