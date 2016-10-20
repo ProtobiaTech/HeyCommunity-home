@@ -54,6 +54,12 @@
       border-top: 3px solid #B5CAFF !important;
       opacity: 1 !important;
     }
+
+    @media (max-width: 767px) {
+      .navbar .slogan {
+        display: none;
+      }
+    }
   </style>
 </head>
 
@@ -67,7 +73,7 @@
     <div class="navbar-header">
       <a style="font-family: AvenirNextLTPro-Regular, 'Helvetica Neue', Helvetica, Arial, sans-serif; padding-top:20px; font-size:32px; color:#fff; opacity:1; line-height:1em;" class="navbar-brand" href="/">
         HeyCommunity
-        <small style="color:#eee; font-size:16px;">线上社区解决方案</small>
+        <small class="slogan" style="color:#eee; font-size:16px;">线上社区解决方案</small>
       </a>
       <button type="button" class="navbar-toggle button ionic" data-toggle="collapse" data-target=".navbar-ex1-collapse">
         <i class="icon ion-navicon"></i>
@@ -163,12 +169,20 @@
   <!-- -->
   <div class="copy">
     <div class="copy-container">
-      <p class="authors">
+      <p class="authors hidden-xs">
         Thinks to the
         <a href="http://ionicframework.com" target="_blank">Ionic Framework</a>
         and
         <a href="http://angular.io" target="_blank">Angular</a>
         <span>|</span>
+        &copy;2016 <a target="_blank" href="http://www.protobia.tech">Protobia.tech</a>
+      </p>
+      <p class="authors hidden-sm hidden-md hidden-lg" style="text-align:center;">
+        Thinks to the
+        <a href="http://ionicframework.com" target="_blank">Ionic Framework</a>
+        and
+        <a href="http://angular.io" target="_blank">Angular</a>
+        <br>
         &copy;2016 <a target="_blank" href="http://www.protobia.tech">Protobia.tech</a>
       </p>
     </div>

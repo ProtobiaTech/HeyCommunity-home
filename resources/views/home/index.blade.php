@@ -5,6 +5,12 @@
   <!-- -->
   <div id="slider" class="primary-row">
     <div class="slide horizontal-gradient">
+      <style>
+        .slide .btn-row a.btn {
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      </style>
       <div class="container">
         <div class="row">
           <div class="col-sm-6 fadeIn">
@@ -18,6 +24,7 @@
             </h3>
             <p class="btn-row">
               <a id="repo-download" class="btn btn-primary btn-download desktop-btn" href="/cloud">开始创建云社区</a>
+              <a id="repo-download" class="btn btn-primary btn-download mobile-btn" href="/cloud">开始创建云社区</a>
             </p>
             <p class="version-text">
               v2.0.0-beta.1, 于 2016-05-12 发布
