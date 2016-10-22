@@ -1,151 +1,195 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="bower-assets/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="bower-assets/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/style/home.css">
-    <script src="bower-assets/jquery/dist/jquery.min.js"></script>
-    <script src="bower-assets/bootstrap/dist/js/bootstrap.min.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>HeyCommunity | 免费开源的线上社区解决方案,致力社群多样精彩社交</title>
-    <meta name="keywords" content="HeyCommunity, hey-community, SNS, 社区, 嘿社区, HEY社区, 社交网络, 开源社区, 开源社交, 社群">
-    <meta name="description" content="HeyCommunity 是为中小社群量身打造的线上社区解决方案，其构建的 app 可适用于 iOS / android / windowPhone / Browser 等终端。让人欣喜的是其 app 是开源的 GPLv3 授权，我们为有需要的用户提供定制开发和运营服务">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HeyCommunity | 免费开源的线上社区解决方案,致力社群多样精彩社交</title>
+  <meta name="keywords" content="HeyCommunity, hey-community, SNS, 社区, 嘿社区, HEY社区, 社交网络, 开源社区, 开源社交, 社群">
+  <meta name="description" content="HeyCommunity 是为中小社群量身打造的线上社区解决方案，其构建的 app 可适用于 iOS / android / windowPhone / Browser 等终端。让人欣喜的是其 app 是开源的 GPLv3 授权，我们为有需要的用户提供定制开发和运营服务">
+
+  <title>HeyCommunity</title>
+  <link href="ionic-assets/css/site8e29.css?25" rel="stylesheet">
+  <link rel="stylesheet" href="ionic-assets/css/ionicons.min.css">
+  <link rel="stylesheet" type="text/css" href="ionic-assets/css/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="ionic-assets/css/slick-theme.css"/>
+
+  <script src="{{ url('bower-assets/jquery/dist/jquery.min.js') }}"></script>
+  <script>
+    $(function() {
+      setTimeout(function(){
+        $('.snap-bar').addClass('active');
+      },1500);
+    });
+  </script>
+
+  <!-- -->
+  <script type="text/javascript" src="ionic-assets/js/slick.js"></script>
+  <script>
+  $(document).ready(function() {
+    $('#slider').slick({
+      dots: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 1,
+      adaptiveHeight: false,
+      fade: true,
+      cssEase: 'ease-in-out',
+      draggable: false,
+      autoplay: true,
+      autoplaySpeed: 8000,
+      focusOnSelect: false,
+      // https://github.com/kenwheeler/slick/issues/1537
+      accessibility: false
+    }).on('beforeChange', function(event, slick, currentSlide, nextSlide){
+      $slide = $("#slider .slick-current");
+      $slide.addClass('slick-fade-out');
+      setTimeout(function(){
+        $slide.removeClass('slick-fade-out')
+      }, 300) // match speed in slick config object above
+    });
+  });
+  </script>
+  <style>
+    .nav .active {
+      border-top: 3px solid #B5CAFF !important;
+      opacity: 1 !important;
+    }
+
+    @media (max-width: 767px) {
+      .navbar .slogan {
+        display: none;
+      }
+    }
+  </style>
 </head>
 
-<body>
-    <div class="main-background"></div>
+<body class="full-page {{ Request::is('/') ? 'home' : '' }}">
+<div id="creator-bar" class="snap-bar active hide">
+  <span class="large">HeyCommunity v2.0.0-beta.1 is comming</span>
+</div>
 
-    @include('layouts.common')
-
-    <nav id="nav-xs" class="visible-xs-block text-center" style="max-width:90%; margin:0 auto;">
-        <h1 class="h3">HeyCommunity</h1>
-        <a href="#home" onclick="$('#main-carousel').carousel(0)">首页</a>
-        <a href="#cases" onclick="$('#main-carousel').carousel(1)">场景和案例</a>
-        <a href="#prod" onclick="$('#main-carousel').carousel(2)">产品与服务</a>
-        <a href="#about" onclick="$(#main-carousel').carousel(3)">关于我们</a>
-        <a href="/bbs"><i class="glyphicon glyphicon-fire"></i> 用户社区</a>
-        <a target="_blank" href="https://github.com/dev4living/HeyCommunity">Open Sources</a>
-    </nav>
-
-    <div id="main-body">
-        <div class="section-body container-fluid">
-            @yield('content')
-        </div>
-
-        <div id="footer" class="container-fluid">
-            <div class="row" style="margin-bottom:10px;">
-                <div class="col-xs-12 hidden-xs">
-                    <div class="pull-right">
-                    </div>
-                    <nav id="nav-sm">
-                        <span>HeyCommunity</span> &nbsp;&nbsp;&nbsp;
-                        <a href="#home" onclick="$('#main-carousel').carousel(0)">首页</a>
-                        <a href="#cases" onclick="$('#main-carousel').carousel(1)">场景和案例</a>
-                        <a href="#prod" onclick="$('#main-carousel').carousel(2)">产品与服务</a>
-                        <a href="#about" onclick="$(#main-carousel').carousel(3)">关于我们</a>
-                        <a target="_blank" href="/bbs"><i class="glyphicon glyphicon-fire"></i> 用户社区</a>
-                        <a target="_blank" href="https://github.com/dev4living/HeyCommunity">Open Sources</a>
-
-                        <div class="pull-right hidden-xs hidden-sm" style="height:20px; margin-left:30px;">
-                            <iframe src="https://ghbtns.com/github-btn.html?user=dev4living&repo=HeyCommunity&type=fork&count=true" frameborder="0" scrolling="0" width="82px" height="20px"></iframe>
-                        </div>
-                        <div class="pull-right" style="height:20px;">
-                            <iframe src="https://ghbtns.com/github-btn.html?user=dev4living&repo=HeyCommunity&type=star&count=true" frameborder="0" scrolling="0" width="82px" height="20px"></iframe>
-                        </div>
-                    </nav>
-
-                    <div class="pull-right sns">
-                        <span>
-                            <i class="fa fa-qq" aria-hidden="true"></i>
-                            <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=f9ee4a4ca4a3e44c2bd6d6c5da9423fa63f46f150205d468299cdcce32606b71">QQ群: (242078519)</a>
-                        </span>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzIwNjM5MDQ5NA==&mid=100000001&idx=1&sn=dd2021fc926d7dc32fe83feeadf396d3&scene=1&srcid=0908kgRYlY7AoVbgxrfzi3bq#rd" class="wechat-a">
-                            <i class="fa fa-weixin" aria-hidden="true"></i> 微信公众号: HEY社区
-                            <div class="wechat-box">
-                                <img src="/assets/images/wechat-qrcode.jpg">
-                            </div>
-                        </a>
-                    </div>
-                    <div>
-                        &copy;2015 - 2016 Protobia.tech
-                        &nbsp;&nbsp;&nbsp;
-                        ICP: 15015443-8
-                    </div>
-                </div>
-
-                <div class="section-nav col-xs-12 visible-xs-block text-center">
-                    <hr style="margin-top:0; margin-bottom:10px; border-color:#fefefe;">
-                    <div>
-                        <span>
-                            <i class="fa fa-qq" aria-hidden="true"></i>
-                            <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=f9ee4a4ca4a3e44c2bd6d6c5da9423fa63f46f150205d468299cdcce32606b71">QQ群: (242078519)</a>
-                        </span>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzIwNjM5MDQ5NA==&mid=100000001&idx=1&sn=dd2021fc926d7dc32fe83feeadf396d3&scene=1&srcid=0908kgRYlY7AoVbgxrfzi3bq#rd" class="wechat-a">
-                            <i class="fa fa-weixin" aria-hidden="true"></i> 微信公众号: HEY社区
-                        </a>
-                    </div>
-                    <div>
-                        <span>HeyCommunity</span> &nbsp;&nbsp;&nbsp;
-                        &copy;2015 - 2016 Protobia.tech
-                    </div>
-                    <div class="" style="height:20px; margin-top:8px;">
-                        <iframe src="https://ghbtns.com/github-btn.html?user=dev4living&repo=HeyCommunity&type=star&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
-                        <iframe src="https://ghbtns.com/github-btn.html?user=dev4living&repo=HeyCommunity&type=fork&count=true" frameborder="0" scrolling="0" width="82px" height="20px"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
+<nav class="navbar navbar-default horizontal-gradient" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <a style="font-family: AvenirNextLTPro-Regular, 'Helvetica Neue', Helvetica, Arial, sans-serif; padding-top:20px; font-size:32px; color:#fff; opacity:1; line-height:1em;" class="navbar-brand" href="/">
+        HeyCommunity
+        <small class="slogan" style="color:#eee; font-size:16px;">线上社区解决方案</small>
+      </a>
+      <button type="button" class="navbar-toggle button ionic" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <i class="icon ion-navicon"></i>
+      </button>
     </div>
 
-    <script>
-    window.onhashchange = function() {
-        setCarouselItem();
-    }
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ url('/') }}">功能特性</a></li>
+        <li><a class="nav-link {{ Request::is('cloud') ? 'active' : '' }}" href="{{ url('/cloud') }}">云社区</a></li>
+        <li class="hide"><a class="nav-link {{ Request::is('business') ? 'active' : '' }}" href="{{ url('business') }}">商业解决方案</a></li>
+        <li><a class="nav-link {{ Request::is('open-sources') ? 'active' : '' }}" href="{{ url('open-sources') }}">开源软件</a></li>
+        <li><a class="nav-link {{ Request::is('about-us') ? 'active' : '' }}" href="{{ url('about-us') }}">关于我们</a></li>
 
-    $(function() {
-        setCarouselItem();
-    });
+        @if (Auth::check())
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle nav-link " data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->site_name }} <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <div class="arrow-up"></div>
+              <li><a class="nav-link" href="{{ url('dashboard') }}">管理后台</a></li>
+              <li><a class="nav-link" href="{{ url('logout') }}">退出</a></li>
+            </ul>
+          </li>
+        @else
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle nav-link " data-toggle="dropdown" role="button" aria-expanded="false">注册/登录 <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <div class="arrow-up"></div>
+              <li><a class="nav-link" href="{{ url('login') }}">登录</a></li>
+              <li><a class="nav-link" href="{{ url('cloud') }}">注册云社区</a></li>
+            </ul>
+          </li>
+        @endif
+      </ul>
+    </div>
+  </div>
+</nav>
 
-    function setCarouselItem() {
-        var currentHash = location.hash;
-        $('#nav-sm a').removeClass('active');
-        $('#nav-xs a').removeClass('active');
-        $('.main-carousel-bg').removeClass('isHomePage');
 
-        switch (currentHash) {
-            case '#home':
-                $('.main-carousel-bg').addClass('isHomePage');
-                $('#nav-sm a[href*="home"]').addClass('active');
-                $('#nav-xs a[href*="home"]').addClass('active');
-                $('#main-carousel').carousel(0)
-                break;
-            case '#cases':
-                $('#nav-sm a[href*="cases"]').addClass('active');
-                $('#nav-xs a[href*="cases"]').addClass('active');
-                $('#main-carousel').carousel(1)
-                break;
-            case '#prod':
-                $('#nav-sm a[href*="prod"]').addClass('active');
-                $('#nav-xs a[href*="prod"]').addClass('active');
-                $('#main-carousel').carousel(2)
-                break;
-            case '#about':
-                $('#nav-sm a[href*="about"]').addClass('active');
-                $('#nav-xs a[href*="about"]').addClass('active');
-                $('#main-carousel').carousel(3)
-                break;
-            case '#jobs':
-                $('#nav-sm a[href*="jobs"]').addClass('active');
-                $('#nav-xs a[href*="jobs"]').addClass('active');
-                $('#main-carousel').carousel(4)
-                break;
-            default:
-                $('.main-carousel-bg').addClass('isHomePage');
-        }
-    }
-    </script>
+<!-- content -->
+@yield('content')
+
+
+<!-- footer -->
+<footer class="footer">
+  <!-- -->
+  <nav class="base-links">
+    <dl>
+      <dt>产品</dt>
+      <dd><a href="{{ url('cloud') }}">云社区</a></dd>
+      <dd class="hide"><a href="{{ url('business') }}">商业解决方案</a></dd>
+      <dd><a href="{{ url('open-sources') }}">开源软件</a></dd>
+    </dl>
+
+    <dl>
+      <dt>协议</dt>
+      <dd><a disabled>用户协议</a></dd>
+      <dd><a disabled>隐私承诺</a></dd>
+    </dl>
+
+    <dl>
+      <dt>我们</dt>
+      <dd><a href="{{ url('about-us') }}">关于我们</a></dd>
+      <dd><a href="{{ url('jobs') }}">工作机会</a></dd>
+    </dl>
+
+    <dl>
+      <dt>开放源代码</dt>
+      <dd><a href="https://github.com/dev4living/HeyCommunity" target="_blank">HeyCommunity@Github</a></dd>
+      <dd><a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank">GPLv3 License</a></dd>
+    </dl>
+  </nav>
+
+
+  <!-- -->
+  <div class="newsletter row">
+    <div class="newsletter-container">
+      <div class="col-sm-7">
+        <div class="newsletter-text">与我们保持联系</div>
+        <div class="sign-up">通过电子邮箱，可以在第一时间获取 产品更新 / 产品研发计划 / 公司动态 等信息</div>
+      </div>
+
+      <form action="http://codiqa.createsend.com/t/t/s/jytylh/" method="post" class="input-group col-sm-5">
+        <input disabled id="fieldEmail" name="cm-jytylh-jytylh" class="form-control" type="email" placeholder="Email" required />
+        <span class="input-group-btn">
+          <button disabled class="btn btn-default" type="submit">订阅</button>
+        </span>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- -->
+  <div class="copy">
+    <div class="copy-container">
+      <p class="authors hidden-xs">
+        Thinks to the
+        <a href="http://ionicframework.com" target="_blank">Ionic Framework</a>
+        and
+        <a href="http://angular.io" target="_blank">Angular</a>
+        <span>|</span>
+        &copy;2016 <a target="_blank" href="http://www.protobia.tech">Protobia.tech</a>
+      </p>
+      <p class="authors hidden-sm hidden-md hidden-lg" style="text-align:center;">
+        Thinks to the
+        <a href="http://ionicframework.com" target="_blank">Ionic Framework</a>
+        and
+        <a href="http://angular.io" target="_blank">Angular</a>
+        <br>
+        &copy;2016 <a target="_blank" href="http://www.protobia.tech">Protobia.tech</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="ionic-assets/js/bootstrap.min.js"></script>
+<script src="ionic-assets/js/sitec4ca.js?1"></script>
 </body>
 </html>

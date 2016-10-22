@@ -12,6 +12,16 @@
 */
 
 Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
+Route::get('cloud', ['as' => 'home-cloud', 'uses' => 'HomeController@cloud']);
+Route::post('store-tenant', ['as' => 'home-store-tenant', 'uses' => 'HomeController@storeTenant']);
+Route::get('login', ['as' => 'home-login', 'uses' => 'HomeController@login']);
+Route::post('login', ['uses' => 'HomeController@loginHandler']);
+Route::get('logout', ['as' => 'home-logout', 'uses' => 'HomeController@logout']);
+Route::get('business', ['as' => 'home-business', 'uses' => 'HomeController@business']);
+Route::get('open-sources', ['as' => 'home-open-sources', 'uses' => 'HomeController@openSources']);
+Route::get('jobs', ['as' => 'home-jobs', 'uses' => 'HomeController@jobs']);
+Route::get('about-us', ['as' => 'home-about-us', 'uses' => 'HomeController@aboutUs']);
+
 Route::get('log-in', 'TenantController@logIn');
 Route::post('log-in', 'TenantController@logInHandler');
 Route::get('sign-up', 'TenantController@signUp');
