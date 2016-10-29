@@ -30,7 +30,7 @@
           <div class="form-group">
               <label class="col-sm-3 control-label" for="title">管理员邮箱</label>
               <div class="col-sm-9">
-                  <input class="form-control" type="text" name="email" value="{{ old('email') }}" placeholder="hello@hey-community.com">
+                  <input class="form-control" type="text" name="email" value="{{ old('email') }}" placeholder="hello@trial.hey-community.cn">
               </div>
           </div>
 

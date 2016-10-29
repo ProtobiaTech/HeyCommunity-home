@@ -61,7 +61,7 @@ class TenantController extends Controller
             'password'          =>      'required|min:6',
         ]);
 
-        $subDomain = $request->sub_domain . '.hey-community.com';
+        $subDomain = $request->sub_domain . '.trial.hey-community.cn';
         $request->merge(['sub_domain' => $subDomain]);
         $validator = Validator::make($request->all(), [
             'sub_domain'        =>      'required|unique:tenants',
@@ -70,7 +70,7 @@ class TenantController extends Controller
             if ($request->ajax()) {
                 return response($validator->errors(), 422);
             } else {
-                $subDomain = strstr($request->sub_domain, '.hey-community.com', true);
+                $subDomain = strstr($request->sub_domain, '.trial.hey-community.cn', true);
                 $request->merge(['sub_domain' => $subDomain]);
                 return redirect('/sign-up')->withInput()->withErrors($validator);
             }

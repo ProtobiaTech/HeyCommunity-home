@@ -45,7 +45,7 @@
                                 <div class="input-group">
                                     <span class="input-group-addon" id="sizing-addon1">http://</span>
                                     <input class="form-control" type="text" name="sub_domain" value="{{ old('sub_domain') }}" placeholder="sub-domain">
-                                    <span class="input-group-addon" id="sizing-addon1">.hey-community.com</span>
+                                    <span class="input-group-addon" id="sizing-addon1">.trial.hey-community.cn</span>
                                 </div>
                                 @if ($errors->has('sub_domain'))
                                 <div class="help-block">{{ $errors->first('sub_domain') }}</div>
@@ -56,7 +56,7 @@
                         <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
                             <label class="col-sm-3 control-label" for="title">管理员邮箱</label>
                             <div class="col-sm-9">
-                                <input class="form-control" type="text" name="email" value="{{ old('email') }}" placeholder="admin@hey-community.com">
+                                <input class="form-control" type="text" name="email" value="{{ old('email') }}" placeholder="admin@trial.hey-community.cn">
                                 @if ($errors->has('email'))
                                 <div class="help-block">{{ $errors->first('email') }}</div>
                                 @endif

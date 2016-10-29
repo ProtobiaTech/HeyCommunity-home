@@ -96,7 +96,7 @@ class HomeController extends Controller
         ]);
 
         $oldSubDomain = $request->sub_domain;
-        $subDomain = $request->sub_domain . '.hey-community.com';
+        $subDomain = $request->sub_domain . '.trial.hey-community.cn';
         $r = $request->merge(['sub_domain' => $subDomain]);
 
         $validator = Validator::make($request->all(), [
