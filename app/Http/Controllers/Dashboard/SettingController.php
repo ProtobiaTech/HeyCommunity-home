@@ -55,4 +55,44 @@ class SettingController extends Controller
             return back()->withInput();
         }
     }
+
+    /**
+     *
+     */
+    public function wechatPa()
+    {
+        $assign['tenant'] = Auth::user();
+        return view('dashboard.setting.wechat-pa', $assign);
+    }
+
+    /**
+     *
+     */
+    public function editWechatPa()
+    {
+        $assign['tenant'] = Auth::user();
+        return view('dashboard.setting.edit-wechat-pa', $assign);
+    }
+
+    /**
+     *
+     */
+    public function updateWechatPa(Request $request)
+    {
+        $this->validate($request, [
+            'enable_wechat_pa'  =>  'required',
+            'wx_app_id'         =>  'min:15',
+            'wx_app_secret'     =>  'min:20',
+        ]);
+
+        $Tenant = Auth::user();
+        $Tenant->enable_wechat_pa = $request->enable_wechat_pa;
+
+        $Tenant->info->wx_app_id = $request->wx_app_id;
+        $Tenant->info->wx_app_secret = $request->wx_app_secret;
+
+        $Tenant->save();
+        $Tenant->info->save();
+        return redirect('/dashboard/setting/wechat-pa');
+    }
 }

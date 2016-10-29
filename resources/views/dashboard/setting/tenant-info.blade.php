@@ -15,6 +15,10 @@
                     <li><a href="{{ url('/dashboard/setting') }}">Setting</a></li>
                     <li class="active">Tenant Info</li>
                 </ol>
+
+                <div class="pull-right">
+                    <a href="{{ url('dashboard/setting/edit-tenant-info') }}" class="btn btn-default btn-sm">Edit</a>
+                </div>
             </div>
 
             <div id="section-mainbody">

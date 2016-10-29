@@ -8,6 +8,7 @@ use App\Http\Requests;
 use Auth;
 use Hash, Validator;
 use App\Tenant;
+use App\TenantInfo;
 
 class HomeController extends Controller
 {
@@ -84,19 +85,22 @@ class HomeController extends Controller
      */
     public function storeTenant(Request $request)
     {
-        $oldSubDomain = $request->sub_domain;
-        $subDomain = $request->sub_domain . '.hey-community.com';
-        $r = $request->merge(['sub_domain' => $subDomain]);
-
-        $validator = Validator::make($request->all(), [
+        $this->validate($request, [
             'site_name'         =>      'required|min:2|unique:tenants',
             'domain'            =>      'min:3|unique:tenants',
-            'sub_domain'        =>      'required|min:3|unique:tenants',
             'sub_domain'        =>      'required|min:3',
             'email'             =>      'required|email|unique:tenants',
             'phone'             =>      'required|min:10000000000|integer|unique:tenants',
             'password'          =>      'required|min:6',
             'password_duplicate'=>      'required|min:6|same:password',
+        ]);
+
+        $oldSubDomain = $request->sub_domain;
+        $subDomain = $request->sub_domain . '.hey-community.com';
+        $r = $request->merge(['sub_domain' => $subDomain]);
+
+        $validator = Validator::make($request->all(), [
+            'sub_domain'        =>      'required|min:3|unique:tenants',
         ]);
 
         if ($validator->fails()) {
@@ -116,6 +120,10 @@ class HomeController extends Controller
         $Tenant->password       =   Hash::make($request->password);
 
         if ($Tenant->save()) {
+            $TenantInfo = new TenantInfo();
+            $TenantInfo->tenant_id = $Tenant->id;
+            $TenantInfo->save();
+
             Auth::login($Tenant);
             return redirect()->route('home-cloud');
         } else {
