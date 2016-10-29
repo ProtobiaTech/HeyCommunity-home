@@ -11,7 +11,7 @@
     <link href="{{ asset('/bower-assets/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('/bower-assets/bootswatch/flatly/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('/bower-assets/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('/css/app-dashboard.css') }}" rel="stylesheet">
+    <link href="{{ asset('/assets/style/app-dashboard.css') }}" rel="stylesheet">
     <script src="{{ asset('bower-assets/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ asset('bower-assets/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 
