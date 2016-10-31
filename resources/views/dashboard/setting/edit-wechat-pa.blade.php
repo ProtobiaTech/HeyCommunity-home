@@ -57,12 +57,23 @@
                         </div>
                     </div>
 
-                    <div class="form-group {{ $errors->has('wx_app_secret') ? 'has-error' : '' }}">
+                    <div class="form-group {{ $errors->has('wx_verify_file') ? 'has-error' : '' }}">
                         <label for="input-wx-verify-file" class="col-sm-2 control-label">MP_verify file</label>
                         <div class="col-sm-10">
                             <input type="file" name="wx_verify_file" class="form-control" id="input-wx-verify-file">
                             @if ($errors->has('wx_verify_file'))
                             <div class="help-block">{{ $errors->first('wx_verify_file') }}</div>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group {{ $errors->has('wx_temp_notice_id') ? 'has-error' : '' }}">
+                        <label for="input-wx-app-id" class="col-sm-2 control-label">TmlNotice ID</label>
+                        <div class="col-sm-10">
+                            <input type="string" name="wx_temp_notice_id" class="form-control" id="input-wx-app-id" placeholder="" value="{{ old('wx_temp_notice_id', $tenant->info->wx_temp_notice_id) }}">
+                            <div class="help-block">Please use "IT科技 - IT软件与服务: 新邮件通知" Template</div>
+                            @if ($errors->has('wx_temp_notice_id'))
+                            <div class="help-block">{{ $errors->first('wx_temp_notice_id') }}</div>
                             @endif
                         </div>
                     </div>

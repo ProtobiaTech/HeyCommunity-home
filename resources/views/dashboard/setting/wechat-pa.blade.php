@@ -51,6 +51,16 @@
                           {{ $tenant->enable_wechat_pa ? 'Yes' : 'No'}}
                         </td>
                     </tr>
+                    <tr>
+                        <th style="width:10em;">TempNotice Id</th>
+                        <td>
+                            @if ($tenant->info && $tenant->info->wx_temp_notice_id)
+                              {{ $tenant->info->wx_temp_notice_id }}
+                            @else
+                              null
+                            @endif
+                        </td>
+                    </tr>
                 </table>
             </div>
         </div>

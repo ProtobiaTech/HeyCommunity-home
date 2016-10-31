@@ -81,8 +81,9 @@ class SettingController extends Controller
     {
         $this->validate($request, [
             'enable_wechat_pa'  =>  'required',
-            'wx_app_id'         =>  'min:15',
-            'wx_app_secret'     =>  'min:20',
+            'wx_app_id'         =>  'required_if:enable_wechat_pa,1|min:15',
+            'wx_app_secret'     =>  'required_if:enable_wechat_pa,1|min:20',
+            'wx_temp_notice_id' =>  'required_if:enable_wechat_pa,1|min:35',
             'wx_verify_file'    =>  'max:1'
         ]);
 
@@ -90,7 +91,9 @@ class SettingController extends Controller
         $Tenant->enable_wechat_pa = $request->enable_wechat_pa;
         $Tenant->info->wx_app_id = $request->wx_app_id;
         $Tenant->info->wx_app_secret = $request->wx_app_secret;
+        $Tenant->info->wx_temp_notice_id = $request->wx_temp_notice_id;
 
+        // save verify file
         if ($request->hasFile('wx_verify_file')) {
             $path = env('WECHAT_PA_VERIFY_FILE_PATH', '/var/www/');
             $file= $request->file('wx_verify_file');
@@ -100,5 +103,23 @@ class SettingController extends Controller
         $Tenant->save();
         $Tenant->info->save();
         return redirect('/dashboard/setting/wechat-pa');
+    }
+
+    /**
+     *
+     */
+    public function wechatNotice()
+    {
+        $assign['tenant'] = Auth::user();
+        return view('dashboard.setting.wechat-notice', $assign);
+    }
+
+    /**
+     *
+     */
+    public function editWechatNotice()
+    {
+        $assign['tenant'] = Auth::user();
+        return view('dashboard.setting.edit-wechat-pa', $assign);
     }
 }
