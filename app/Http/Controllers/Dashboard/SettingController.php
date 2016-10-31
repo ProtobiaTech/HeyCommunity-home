@@ -83,13 +83,19 @@ class SettingController extends Controller
             'enable_wechat_pa'  =>  'required',
             'wx_app_id'         =>  'min:15',
             'wx_app_secret'     =>  'min:20',
+            'wx_verify_file'    =>  'max:1'
         ]);
 
         $Tenant = Auth::user();
         $Tenant->enable_wechat_pa = $request->enable_wechat_pa;
-
         $Tenant->info->wx_app_id = $request->wx_app_id;
         $Tenant->info->wx_app_secret = $request->wx_app_secret;
+
+        if ($request->hasFile('wx_verify_file')) {
+            $path = env('WECHAT_PA_VERIFY_FILE_PATH', '/var/www/');
+            $file= $request->file('wx_verify_file');
+            $file->move($path, $file->getClientOriginalName());
+        }
 
         $Tenant->save();
         $Tenant->info->save();

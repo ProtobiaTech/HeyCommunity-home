@@ -20,11 +20,11 @@
             <div id="section-mainbody">
                 <p class="h3 text-center">Edit Wechat Public Account</p>
 
-                {!! Form::open(array('url' => '/dashboard/setting/update-wechat-pa', 'method' => 'post', 'class' => 'form form-horizontal')) !!}
+                {!! Form::open(array('url' => '/dashboard/setting/update-wechat-pa', 'method' => 'post', 'class' => 'form form-horizontal', 'files' => true)) !!}
                     <div class="form-group {{ $errors->has('wx_app_id') ? 'has-error' : '' }}">
-                        <label for="input-site-name" class="col-sm-2 control-label">App ID</label>
+                        <label for="input-wx-app-id" class="col-sm-2 control-label">App ID</label>
                         <div class="col-sm-10">
-                            <input type="string" name="wx_app_id" class="form-control" id="input-site-name" placeholder="" value="{{ old('wx_app_id', $tenant->info->wx_app_id) }}">
+                            <input type="string" name="wx_app_id" class="form-control" id="input-wx-app-id" placeholder="" value="{{ old('wx_app_id', $tenant->info->wx_app_id) }}">
                             @if ($errors->has('wx_app_id'))
                             <div class="help-block">{{ $errors->first('wx_app_id') }}</div>
                             @endif
@@ -32,9 +32,9 @@
                     </div>
 
                     <div class="form-group {{ $errors->has('wx_app_secret') ? 'has-error' : '' }}">
-                        <label for="input-site-name" class="col-sm-2 control-label">App Secret</label>
+                        <label for="input-wx-app-secret" class="col-sm-2 control-label">App Secret</label>
                         <div class="col-sm-10">
-                            <input type="string" name="wx_app_secret" class="form-control" id="input-site-name" placeholder="" value="{{ old('wx_app_secret', $tenant->info->wx_app_secret) }}">
+                            <input type="string" name="wx_app_secret" class="form-control" id="input-wx-app-secret" placeholder="" value="{{ old('wx_app_secret', $tenant->info->wx_app_secret) }}">
                             @if ($errors->has('wx_app_secret'))
                             <div class="help-block">{{ $errors->first('wx_app_secret') }}</div>
                             @endif
@@ -42,7 +42,7 @@
                     </div>
 
                     <div class="form-group {{ $errors->has('enable_wechat_pa') ? 'has-error' : '' }}">
-                        <label for="input-site-name" class="col-sm-2 control-label">Enable</label>
+                        <label for="input-enable" class="col-sm-2 control-label">Enable</label>
                         <div class="col-sm-10">
                             <div class="radio radio-inline">
                               <label>
@@ -54,6 +54,16 @@
                                 <input type="radio" name="enable_wechat_pa" value="0" {{ old('enable_wechat_pa', $tenant->enable_wechat_pa) ? '' : 'checked' }}> No
                               </label>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group {{ $errors->has('wx_app_secret') ? 'has-error' : '' }}">
+                        <label for="input-wx-verify-file" class="col-sm-2 control-label">MP_verify file</label>
+                        <div class="col-sm-10">
+                            <input type="file" name="wx_verify_file" class="form-control" id="input-wx-verify-file">
+                            @if ($errors->has('wx_verify_file'))
+                            <div class="help-block">{{ $errors->first('wx_verify_file') }}</div>
+                            @endif
                         </div>
                     </div>
 
