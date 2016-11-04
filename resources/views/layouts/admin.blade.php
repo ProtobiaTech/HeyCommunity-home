@@ -75,6 +75,27 @@
 
 @yield('content')
 
+<!-- DaoVoice -->
+<script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/86480a80.js","daovoice");</script>
+@if (Auth::guest())
+  <script>
+    daovoice('init', {
+      app_id: "86480a80",
+    });
+    daovoice('update');
+  </script>
+@else
+  <script>
+    daovoice('init', {
+      app_id: "86480a80",
+      email: "{{ Auth::user()->email }}",             // 替换成当前用户的邮件
+      user_id: "{{ Auth::user()->id }}",              // 选填: 替换成当前用户的唯一标识
+      signed_up: {{ Auth::user()->created_at->getTimestamp() }},  // 选填: // 替换当前用户的注册时间，格式为 Unix 时间戳
+      name: "{{ Auth::user()->site_name }}",          // 选填: 替换当前用户的真名或者昵称
+    });
+    daovoice('update');
+  </script>
+@endif
 </body>
 </html>
 
