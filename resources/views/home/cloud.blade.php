@@ -246,8 +246,11 @@
         <div class="item col-sm-4" style="padding-top:0;">
           <h3 class="text-center">海峡交通迷社区</h3>
           <p class="text-center">
-            福建福州的一个交通迷俱乐部 <br>
-            <br>
+            福建交通爱好者俱乐部 <br>
+            曾经使用 Discuz! 论坛用于俱乐部交流，MediaWiki 做为百科资料库。现在使用 HeyCommunity 用于俱乐部成员日常社交
+          </p>
+          <p class="text-center">
+            多平台支持，良好的移动操作体验。随手拍张照片即可分享在社区中。产品免费、开源，便于日后私有化部署和二次开发
           </p>
           <span class="hide">
             <i class="ion-qr-scanner"></i> &nbsp;
@@ -257,27 +260,38 @@
         <div class="item col-sm-4" style="padding-top:0;">
           <h3 class="text-center">HEY 赣州</h3>
           <p class="text-center">
-            赣州实名同城社区 <br>
-            三四线人口流动性较低，城市居民安生立身过着平静的生活。 实名同城社区是市民在现实生活的延伸 <br>
-            <br>
+            赣州实名制同城社区 <br>
+            三四线人口流动性较低，城市居民安生立身过着平静的生活。 实名同城社区是市民在现实生活的延伸
+          </p>
+          <p class="text-center">
+            运营微信服务号积攒粉丝，通过公众号和朋友圏的链接做为社区入口，让用户便捷地在圈子里交流。
+            然后引导用户下载 App, 获取更丰富的功能和更流畅的体验
           </p>
           <span class="hide">
             <i class="ion-qr-scanner"></i> &nbsp;
             扫码进入该社区
           </span>
+          <br>
+          <br>
         </div>
         <div class="item col-sm-4" style="padding-top:0;">
           <h3 class="text-center">HeyCommunity DEMO</h3>
           <p class="text-center">
             HeyCommunity 产品演示社区 <br>
-            通过这个社区，你可以体验到产品的各种功能 <br>
+            通过这个社区，可以体验到产品的各种功能
+          <p>
+          <p class="text-center">
+            它可以运行在浏览器中，在微信中打开还可以体验到授权登录和消息推送功能，它还是个 App 可以安装在 iOS / Android / windows phone 等一切手机中
+          </p>
+          <p class="text-center">
             但是，请不要发布不恰当或无意义的内容 <br>
-            <br>
           </p>
           <span class="hide">
             <i class="ion-qr-scanner"></i> &nbsp;
             扫码进入该社区
           </span>
+          <br>
+          <br>
         </div>
       </div>
     </section>
