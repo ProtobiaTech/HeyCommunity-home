@@ -6,14 +6,18 @@
   <br>
   <br>
   <br>
-  <div style="max-width:500px; margin:0 auto;">
-    <div class="text-center">
-      <h2>关于我们</h2>
-      <p class="sub-heading">
-        嗯，我们先保持神秘
-      </p>
-    </div>
+
+  <div class="container">
+    <div style="max-width:500px; margin:0 auto;">
+      <div class="text-center">
+        <h2>关于我们</h2>
+        <p class="sub-heading">
+          嗯，我们先保持神秘
+        </p>
+      </div>
+      </div>
   </div>
+
   <br>
   <br>
   <br>

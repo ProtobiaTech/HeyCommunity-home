@@ -10,6 +10,22 @@
           overflow: hidden;
           text-overflow: ellipsis;
         }
+
+        @media (max-width: 767px) {
+          #learn-more {
+            margin-bottom: 50px;
+          }
+          #learn-more .feature-row h4 {
+            padding-left: 170px;
+            text-align: center !important;
+            margin-top: 30px !important;
+            margin-bottom: 15px !important;
+          }
+
+          #learn-more .feature-row p {
+            padding-left: 170px;
+          }
+        }
       </style>
       <div class="container">
         <div class="row">
@@ -20,14 +36,14 @@
             <h3>
               再小的社群，都需要有一个独立且功能多样的线上社区，让社群成员之间的交流与互动更加便捷和高效 <br><br>
 
-              在微信中运行云社区，享受微信授权登录和微信消息推送的便利
+              运行在微信中，享受微信的授权登录和消息推送带来的便利
             </h3>
             <p class="btn-row">
               <a id="repo-download" class="btn btn-primary btn-download desktop-btn" href="/cloud">开始创建云社区</a>
               <a id="repo-download" class="btn btn-primary btn-download mobile-btn" href="/cloud">开始创建云社区</a>
             </p>
             <p class="version-text">
-              v2.0.0-beta.1, 于 2016-05-12 发布
+              v2.0.0-beta.1, 于 2016-11-08 发布
             </p>
           </div>
           <div class="col-sm-6 feature-img one" style="background-image: url(/ionic-assets/img/homepage/focus-1.png)">
@@ -48,8 +64,8 @@
               运行在所有平台
             </h1>
             <h3>
-              适用于 iOS / Android / Windows Phone 等一切手机操作系统 <br>
-              更令人惊叹的是，它还能运行手机浏览器中，输入一个网址即开即用用完即走，无须安装
+              适用于 iOS / Android / Windows Phone 等一切手机操作系统 <br><br>
+              更令人惊叹的是，它还能以 WebApp 的形式运行在手机浏览器或 App 内置游览器（如微信）中，输入网址即开即用用完即走，无须安装
             </h3>
             <p class="btn-row">
               <a class="btn btn-primary btn-download desktop-btn" href="#feature" target="_blank">了解 HeyCommunity 功能特性</a>
@@ -57,10 +73,6 @@
             </p>
           </div>
           <div class="col-sm-6 feature-img one" style="background-image: url(/ionic-assets/img/homepage/focus-2.png)">
-            <a href="http://demo.hey-community.com" target="_blank">
-              <img style="width:84px; height:84px; border-radius:8px; opacity:0.7;" class="app-icon one" src="assets/images/logo.png">
-              <span class="demo-link" style="bottom:45px; font-size:12px;">产品演示</span>
-            </a>
           </div>
         </div>
       </div>
@@ -72,8 +84,8 @@
           <div class="col-sm-6 fadeIn">
             <h1>强大</h1>
             <h3>
-              HeyCommunity 能够运行在 iOS / Android / Browser 等平台 <br>
-              做为微信 WebApp 使用，可体验到微信消息推送、微信授权登录等功能
+              先进的混合开发模式，构建在 Angular 和 Ionic 之上 <br><br>
+              丰富的功能组件，满足各种各样的社交方式
             </h3>
             <p class="btn-row">
               <a class="btn btn-primary btn-download desktop-btn" href="#feature" target="_blank">了解 HeyCommunity 功能特性</a>
@@ -212,7 +224,7 @@
           <i style="font-size:90px; line-height:1em;" class="ion-ios-people"></i>
           <h3>用户系统 (User)</h3>
         </div>
-        <p class="text-center">
+        <p class="text-center" style="max-width:100%;">
           在社区里，用户可以使用手机注册或登录 <br>
           同时我们也支持微信登录，在未来我们会支持更多的第三方登录方式 <br>
           <br>
@@ -224,7 +236,7 @@
           <i style="font-size:90px; line-height:1em;" class="ion-android-notifications"></i>
           <h3>通知系统 (Notice)</h3>
         </div>
-        <p class="text-center">
+        <p class="text-center" style="max-width:100%;">
           用户对你 关注的内容 或 发布内容，点赞、评论等操作后，你将收到相关通知 <br>
           当然，通知不仅限于此 <br>
           <br>
@@ -235,10 +247,10 @@
     <div class="row">
       <div class="col-md-4">
         <div class="text-center">
-          <i style="font-size:90px; line-height:1em;" class="ion-ios-snowy"></i>
-          <h3>广场 (Timeline)</h3>
+          <i style="font-size:90px; line-height:1em;" class="ion-ios-flower"></i>
+          <h3>公园 (Timeline)</h3>
         </div>
-        <p class="text-center">
+        <p class="text-center" style="max-width:100%;">
           短平快的信息流，类似于 朋友圈、微博 <br>
           用记可以发布一些与社区主题相关的动态 <br>
           动态可以是图片、文字、视频 <br>
@@ -249,9 +261,9 @@
       <div class="col-md-4">
         <div class="text-center">
           <i style="font-size:90px; line-height:1em;" class="ion-ios-bookmarks"></i>
-          <h3>文章 (Article)</h3>
+          <h3>文章 (Article) <small>开发中</small></h3>
         </div>
-        <p class="text-center">
+        <p class="text-center" style="max-width:100%;">
           大型、中型社区使用文章做为内容媒体，用于发布社区的 新闻时事、评论观察 等等
           <br>
           <br>
@@ -264,7 +276,7 @@
           <i style="font-size:90px; line-height:1em;" class="ion-quote"></i>
           <h3>话题 (Topic)</h3>
         </div>
-        <p class="text-center">
+        <p class="text-center" style="max-width:100%;">
           在社区里就一个话题进行深入的讨论 <br>
           不限时间也不限地点 <br>
           对精彩的内容你可以点赞，对不认同的主张你可以提出自己的看法 <br>
@@ -279,7 +291,7 @@
           <i style="font-size:90px; line-height:1em;" class="ion-ios-calendar"></i>
           <h3>活动 (Activity) <small>开发中</small></h3>
         </div>
-        <p class="text-center">
+        <p class="text-center" style="max-width:100%;">
           不管是线上还是线下活动，都是一个社群必不可以的内容 <br>
           组织线下活动，让社群成员相互认识
           <br>
@@ -291,7 +303,7 @@
           <i style="font-size:90px; line-height:1em;" class="ion-chatboxes"></i>
           <h3>消息 (Message) <small>开发中</small></h3>
         </div>
-        <p class="text-center">
+        <p class="text-center" style="max-width:100%;">
           除了异步的交流，即时的聊天通信也是必不可少的。
           即时的聊天通信不及高效便捷，最重要的是这些消息是不在社区公开的 <br>
           <br>
@@ -303,7 +315,7 @@
           <i style="font-size:90px; line-height:1em;" class="ion-android-cart"></i>
           <h3>商店 (store) <small>开发中</small></h3>
         </div>
-        <p class="text-center">
+        <p class="text-center" style="max-width:100%;">
           当社区非常活跃之后，有了很多忠实用户 <br>
           在此之前肯定是付出了很多，现在你在考虑如何赢利以供社区持续发展？ <br>
           那就卖点社区成员们喜爱的商品吧 ~<br>

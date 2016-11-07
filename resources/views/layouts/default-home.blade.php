@@ -50,13 +50,33 @@
   });
   </script>
   <style>
-    .nav .active {
-      border-top: 3px solid #B5CAFF !important;
-      opacity: 1 !important;
+    @media (min-width: 768px) {
+      .nav .active {
+        border-top: 3px solid #B5CAFF !important;
+        opacity: 1 !important;
+      }
     }
 
     @media (max-width: 767px) {
-      .navbar .slogan {
+      .nav .nav-link.active {
+        color: #4F8EF7 !important;
+      }
+
+      .nav .nav-link:hover {
+        color: #4F8EF7 !important;
+      }
+
+      .nav .dropdown-menu li a {
+        color: #fff !important;
+      }
+
+      .nav .dropdown-menu li a:hover {
+        color: #4F8EF7 !important;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .slogan {
         display: none;
       }
     }
@@ -67,6 +87,8 @@
 <div id="creator-bar" class="snap-bar active hide">
   <span class="large">HeyCommunity v2.0.0-beta.1 is comming</span>
 </div>
+
+
 
 <nav class="navbar navbar-default horizontal-gradient" role="navigation">
   <div class="container">
@@ -80,7 +102,7 @@
       </button>
     </div>
 
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <div class="collapse navbar-collapse navbar-ex1-collapse" style="height: auto;">
       <ul class="nav navbar-nav navbar-right">
         <li><a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ url('/') }}">功能特性</a></li>
         <li><a class="nav-link {{ Request::is('cloud') ? 'active' : '' }}" href="{{ url('/cloud') }}">云社区</a></li>

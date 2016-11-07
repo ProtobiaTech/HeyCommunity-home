@@ -180,7 +180,7 @@
           </i>
         </div>
       </div>
-      <div class="col-md-6 code">
+      <div class="col-md-6 code hidden-xs hidden-sm">
         <div class="text-center">
           <i class="ion-ios-body" style="font-size:120px; color:#666;"></i>
         </div>
@@ -205,7 +205,7 @@
           </p>
         </div>
       </div>
-      <div class="col-md-6 code">
+      <div class="col-md-6 code hidden-xs hidden-sm">
         <div class="text-center">
           <i class="ion-paper-airplane" style="font-size:80px; color:#666;"></i>
         </div>
@@ -222,51 +222,67 @@
           云社区
         </p>
       </hgroup>
-      <div class="items">
-        <div class="item" style="padding-top:0;">
-          <h3>海峡交通迷社区</h3>
-          <p>
+      <style>
+      #getting-started-cont .items {
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+      #getting-started-cont .items .item {
+        margin: 0;
+        width: 33.3333%;
+        max-width: 33.3333%;
+        padding-left: 35px;
+        padding-right: 35px;
+      }
+
+      @media (max-width:767px) {
+        #getting-started-cont .items .item {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+      </style>
+      <div class="items row">
+        <div class="item col-sm-4" style="padding-top:0;">
+          <h3 class="text-center">海峡交通迷社区</h3>
+          <p class="text-center">
             福建福州的一个交通迷俱乐部 <br>
             <br>
-            <br>
-            <br>
-            <br>
           </p>
-          <span class="">
+          <span class="hide">
             <i class="ion-qr-scanner"></i> &nbsp;
             扫码进入该社区
           </span>
         </div>
-        <div class="item" style="padding-top:0;">
-          <h3>HEY 赣州</h3>
-          <p>
+        <div class="item col-sm-4" style="padding-top:0;">
+          <h3 class="text-center">HEY 赣州</h3>
+          <p class="text-center">
             赣州实名同城社区 <br>
             三四线人口流动性较低，城市居民安生立身过着平静的生活。 实名同城社区是市民在现实生活的延伸 <br>
             <br>
           </p>
-          <span class="">
+          <span class="hide">
             <i class="ion-qr-scanner"></i> &nbsp;
             扫码进入该社区
           </span>
         </div>
-        <div class="item" style="padding-top:0;">
-          <h3>HeyCommunity DEMO</h3>
-          <p>
+        <div class="item col-sm-4" style="padding-top:0;">
+          <h3 class="text-center">HeyCommunity DEMO</h3>
+          <p class="text-center">
             HeyCommunity 产品演示社区 <br>
             通过这个社区，你可以体验到产品的各种功能 <br>
             但是，请不要发布不恰当或无意义的内容 <br>
             <br>
-            <br>
           </p>
-          <span class="">
+          <span class="hide">
             <i class="ion-qr-scanner"></i> &nbsp;
             扫码进入该社区
           </span>
         </div>
       </div>
     </section>
+    <div style="height:60px;"></div>
   </div>
-
-  <div style="height:100px;"></div>
 </div>
+
 @endsection
