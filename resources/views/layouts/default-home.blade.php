@@ -143,26 +143,26 @@
 <footer class="footer">
   <!-- -->
   <nav class="base-links">
-    <dl>
+    <dl style="padding-left:0 !important;">
       <dt>产品</dt>
       <dd><a href="{{ url('cloud') }}">云社区</a></dd>
       <dd class="hide"><a href="{{ url('business') }}">商业解决方案</a></dd>
       <dd><a href="{{ url('open-sources') }}">开源软件</a></dd>
     </dl>
 
-    <dl>
+    <dl style="padding-left:0 !important;">
       <dt>协议</dt>
       <dd><a disabled>用户协议</a></dd>
       <dd><a disabled>隐私承诺</a></dd>
     </dl>
 
-    <dl>
+    <dl style="padding-left:0 !important;">
       <dt>我们</dt>
       <dd><a href="{{ url('about-us') }}">关于我们</a></dd>
       <dd><a href="{{ url('jobs') }}">工作机会</a></dd>
     </dl>
 
-    <dl>
+    <dl style="padding-left:0 !important;">
       <dt>开放源代码</dt>
       <dd><a href="https://github.com/dev4living/HeyCommunity" target="_blank">HeyCommunity@Github</a></dd>
       <dd><a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank">GPLv3 License</a></dd>
@@ -235,5 +235,7 @@
     daovoice('update');
   </script>
 @endif
+
+@include('layouts.common')
 </body>
 </html>

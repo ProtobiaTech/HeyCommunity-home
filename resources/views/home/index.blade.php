@@ -13,17 +13,27 @@
 
         @media (max-width: 767px) {
           #learn-more {
-            margin-bottom: 50px;
+            margin-bottom: 90px;
+          }
+          #learn-more .feature-row {
+            margin-top: 40px;
+            margin-bottom: 60px;
           }
           #learn-more .feature-row h4 {
-            padding-left: 170px;
+            padding-left: 140px;
             text-align: center !important;
             margin-top: 30px !important;
             margin-bottom: 15px !important;
           }
 
           #learn-more .feature-row p {
-            padding-left: 170px;
+          }
+        }
+
+
+        @media (max-width: 991px) {
+          .features h2 {
+            margin-bottom: -20px !important;
           }
         }
       </style>
@@ -304,8 +314,8 @@
           <h3>消息 (Message) <small>开发中</small></h3>
         </div>
         <p class="text-center" style="max-width:100%;">
-          除了异步的交流，即时的聊天通信也是必不可少的。
-          即时的聊天通信不及高效便捷，最重要的是这些消息是不在社区公开的 <br>
+          除了异步的交流，即时聊天通信也是必不可少的 <br>
+          即时的聊天通信不仅高效便捷，最重要的是这些消息是不在社区公开的 <br>
           <br>
         </p>
       </div>
