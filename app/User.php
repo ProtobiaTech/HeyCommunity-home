@@ -52,4 +52,12 @@ class User extends Model
     {
         return $this->hasMany('App\TimelineComment', 'user_id')->orderBy('created_at', 'desc')->with('author');
     }
+
+    /**
+     *
+     */
+    public static function getAvatarUrl($url)
+    {
+        return TimelineImg::getImgUrl($url);
+    }
 }

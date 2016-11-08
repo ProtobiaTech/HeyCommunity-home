@@ -96,6 +96,8 @@
     daovoice('update');
   </script>
 @endif
+
+@include('layouts.common')
 </body>
 </html>
 

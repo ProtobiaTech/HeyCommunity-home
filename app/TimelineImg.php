@@ -27,4 +27,18 @@ class TimelineImg extends Model
             return [];
         }
     }
+
+    /**
+     *
+     */
+    public static function getImgUrl($url)
+    {
+        $pattern = '/^http[s]?:\/\/.*/';
+        if (preg_match($pattern, $url)) {
+            return $url;
+        } else {
+            $domain = '//public.hey-community.cn/';
+            return $domain . $url;
+        }
+    }
 }
