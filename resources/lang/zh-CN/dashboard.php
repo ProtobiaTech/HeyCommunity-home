@@ -58,7 +58,7 @@ return [
     'Add Administrator'                 =>          '添加管理员',
     'Is Administrator'                  =>          '已是管理员',
     'Administrator List'                =>          '管理员列表',
-    'ID Or Phone'                       =>          'ID 或 手机号码',
+    'ID Phone Or Nickname'              =>          'ID / 手机 / 昵称',
 
     'Getting started'                   =>          '开始',
     'WeChat WebApp'                     =>          '微信 WebApp',

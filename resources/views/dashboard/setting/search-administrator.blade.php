@@ -22,17 +22,17 @@
                 <br>
                 <br>
                 {!! Form::open(array('url' => '/dashboard/setting/search-administrator', 'method' => 'post', 'class' => 'form form-horizontal')) !!}
-                    <div class="form-group {{ $errors->has('id_or_phone') ? 'has-error' : '' }}">
-                        <label for="input-id-or-phone" class="col-sm-2 control-label">{{ trans('dashboard.ID Or Phone') }}</label>
+                    <div class="form-group {{ $errors->has('search_key') ? 'has-error' : '' }}">
+                        <label for="input-id-or-phone" class="col-sm-2 control-label">{{ trans('dashboard.ID Phone Or Nickname') }}</label>
                         <div class="col-sm-10">
                             <div class="input-group">
-                                <input type="string" name="id_or_phone" class="form-control" id="input-id-or-phone" placeholder="" value="{{ old('id_or_phone') }}">
+                                <input type="string" name="search_key" class="form-control" id="input-id-or-phone" placeholder="" value="{{ old('search_key') }}">
                                  <span class="input-group-btn">
                                     <button type="submit" class="btn btn-default" type="button">{{ trans('dashboard.Search') }}</button>
                                 </span>
                             </div>
-                            @if ($errors->has('id_or_phone'))
-                                <div class="help-block">{{ $errors->first('id_or_phone') }}</div>
+                            @if ($errors->has('search_key'))
+                                <div class="help-block">{{ $errors->first('search_key') }}</div>
                             @endif
                         </div>
                     </div>

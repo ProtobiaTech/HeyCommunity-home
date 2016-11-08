@@ -147,13 +147,14 @@ class SettingController extends Controller
     public function searchAdministratorHandler(Request $request)
     {
         $this->validate($request, [
-            'id_or_phone'       =>      'min:1',
+            'search_key'        =>      'min:1',
         ]);
 
         $assign = [];
-        if ($request->has('id_or_phone')) {
+        if ($request->has('search_key')) {
             $request->flash();
-            $assign['users'] = User::where(['id' => $request->id_or_phone])->orWhere('phone', '=', $request->id_or_phone)->get();
+            $nicknameStr = '%' . $request->search_key . '%';
+            $assign['users'] = User::where(['id' => $request->search_key])->orWhere(['phone' => $request->search_key])->orWhere('nickname', 'like', $nicknameStr)->get();
         }
         return view('dashboard.setting.search-administrator', $assign);
     }
