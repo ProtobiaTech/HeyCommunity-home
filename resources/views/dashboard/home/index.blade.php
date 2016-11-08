@@ -5,7 +5,7 @@
 <div class="container">
     <div class="text-center">
         <br><br>
-        <h2>The Trends</h2>
+        <h2>{{ trans('dashboard.The Trends') }}</h2>
         <br>
 
         <canvas id="trend" width="400" height="140"></canvas>

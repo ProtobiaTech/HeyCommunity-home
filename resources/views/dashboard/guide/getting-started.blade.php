@@ -10,15 +10,14 @@
         <div class="col-sm-10">
             <div id="section-breadcrumb">
                 <ol class="breadcrumb">
-                    <li><a href="{{ url('/') }}">HeyCommunity</a></li>
-                    <li><a href="{{ url('/dashboard') }}">Dashboard</a></li>
-                    <li><a href="{{ url('/dashboard/guide') }}">Guide</a></li>
-                    <li class="active">Getting started</li>
+                    <li><a href="{{ url('/dashboard') }}">HeyCommunity</a></li>
+                    <li><a href="{{ url('/dashboard/guide') }}">{{ trans('dashboard.Guide') }}</a></li>
+                    <li class="active">{{ trans('dashboard.Getting started') }}</li>
                 </ol>
             </div>
 
             <div id="section-mainbody">
-                Coming soon ...
+                {{ trans('dashboard.Coming soon ...') }}
             </div>
         </div>
     </div>

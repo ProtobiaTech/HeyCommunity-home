@@ -60,4 +60,24 @@ class User extends Model
     {
         return TimelineImg::getImgUrl($url);
     }
+
+    /**
+     *
+     */
+    public static function getGenderName($v)
+    {
+        $name = '保密';
+        switch ($v) {
+            case 1:
+                $name = '男';
+                break;
+            case 2:
+                $name = '女';
+                break;
+            default:
+                $name = '保密';
+                break;
+        }
+        return $name;
+    }
 }

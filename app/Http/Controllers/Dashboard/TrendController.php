@@ -24,32 +24,32 @@ class TrendController extends Controller
      */
     public function allTenantTrend(Request $request)
     {
-        $datasets[] = new Dataset('Timeline', 'rgba(115,19,12,0.8)');
+        $datasets[] = new Dataset(trans('dashboard.Timeline'), 'rgba(115,19,12,0.8)');
         $dataSources[] = Timeline::allTenants()->get()->sortBy('created_at')->groupBy(function($d) {
             return Carbon::parse($d->created_at)->format('Ymd');
         });
 
-        $datasets[] = new Dataset('TimelineImg', 'rgba(115,222,12,0.4)');
+        $datasets[] = new Dataset(trans('dashboard.TimelineImg'), 'rgba(115,222,12,0.4)');
         $dataSources[] = TimelineImg::allTenants()->get()->sortBy('created_at')->groupBy(function($d) {
             return Carbon::parse($d->created_at)->format('Ymd');
         });
 
-        $datasets[] = new Dataset('TimelineLike', 'rgba(222,99,12,0.4)');
+        $datasets[] = new Dataset(trans('dashboard.TimelineLike'), 'rgba(222,99,12,0.4)');
         $dataSources[] = TimelineLike::allTenants()->get()->sortBy('created_at')->groupBy(function($d) {
             return Carbon::parse($d->created_at)->format('Ymd');
         });
 
-        $datasets[] = new Dataset('TimelineComment', 'rgba(115,19,221,0.4)');
+        $datasets[] = new Dataset(trans('dashboard.TimelineComment'), 'rgba(115,19,221,0.4)');
         $dataSources[] = TimelineComment::allTenants()->get()->sortBy('created_at')->groupBy(function($d) {
             return Carbon::parse($d->created_at)->format('Ymd');
         });
 
-        $datasets[] = new Dataset('User', 'rgba(75,99,9,0.4)');
+        $datasets[] = new Dataset(trans('dashboard.User'), 'rgba(75,99,9,0.4)');
         $dataSources[] = User::allTenants()->get()->sortBy('created_at')->groupBy(function($d) {
             return Carbon::parse($d->created_at)->format('Ymd');
         });
 
-        $datasets[] = new Dataset('Notice', 'rgba(5,19,132,0.4)');
+        $datasets[] = new Dataset(trans('dashboard.Notice'), 'rgba(5,19,132,0.4)');
         $dataSources[] = Notice::allTenants()->get()->sortBy('created_at')->groupBy(function($d) {
             return Carbon::parse($d->created_at)->format('Ymd');
         });
@@ -75,17 +75,17 @@ class TrendController extends Controller
      */
     public function myTrend(Request $request)
     {
-        $datasets[] = new Dataset('Timeline', 'rgba(115,19,12,0.4)');
+        $datasets[] = new Dataset(trans('dashboard.Timeline'), 'rgba(115,19,12,0.4)');
         $dataSources[] = Timeline::get()->sortBy('created_at')->groupBy(function($d) {
             return Carbon::parse($d->created_at)->format('Ymd');
         });
 
-        $datasets[] = new Dataset('User', 'rgba(75,99,9,0.4)');
+        $datasets[] = new Dataset(trans('dashboard.User'), 'rgba(75,99,9,0.4)');
         $dataSources[] = User::get()->sortBy('created_at')->groupBy(function($d) {
             return Carbon::parse($d->created_at)->format('Ymd');
         });
 
-        $datasets[] = new Dataset('Notice', 'rgba(5,19,132,0.4)');
+        $datasets[] = new Dataset(trans('dashboard.Notice'), 'rgba(5,19,132,0.4)');
         $dataSources[] = Notice::get()->sortBy('created_at')->groupBy(function($d) {
             return Carbon::parse($d->created_at)->format('Ymd');
         });

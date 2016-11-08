@@ -10,10 +10,9 @@
         <div class="col-sm-10">
             <div id="section-breadcrumb">
                 <ol class="breadcrumb">
-                    <li><a href="{{ url('/') }}">HeyCommunity</a></li>
-                    <li><a href="{{ url('/dashboard') }}">Dashboard</a></li>
-                    <li><a href="{{ url('/dashboard/data') }}">Data</a></li>
-                    <li class="active">Timeline Data</li>
+                    <li><a href="{{ url('/dashboard') }}">HeyCommunity</a></li>
+                    <li><a href="{{ url('/dashboard/data') }}">{{ trans('dashboard.Data') }}</a></li>
+                    <li class="active">{{ trans('dashboard.Timeline') }}</li>
                 </ol>
             </div>
 
@@ -22,12 +21,12 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Author</th>
-                            <th>Content</th>
-                            <th>Imgs</th>
-                            <th>Like Num</th>
-                            <th>Comment Num</th>
-                            <th>Created At</th>
+                            <th>{{ trans('dashboard.Author') }}</th>
+                            <th>{{ trans('dashboard.Content') }}</th>
+                            <th>{{ trans('dashboard.Imgs') }}</th>
+                            <th>{{ trans('dashboard.Like Num') }}</th>
+                            <th>{{ trans('dashboard.Comment Num') }}</th>
+                            <th>{{ trans('dashboard.Created At') }}</th>
                         </tr>
                     </thead>
                     <tbody>
