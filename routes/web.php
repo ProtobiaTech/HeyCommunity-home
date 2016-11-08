@@ -73,5 +73,11 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth.tenant', 'tenantDa
         Route::get('wechat-notice', 'Dashboard\SettingController@wechatNotice');
         Route::get('edit-wechat-notice', 'Dashboard\SettingController@editWechatNotice');
         Route::post('update-wechat-notice', 'Dashboard\SettingController@updateWechatNotice');
+
+        Route::get('administrator', 'Dashboard\SettingController@administrator');
+        Route::get('search-administrator', 'Dashboard\SettingController@searchAdministratorHandler');
+        Route::post('search-administrator', 'Dashboard\SettingController@searchAdministratorHandler');
+        Route::post('add-administrator', 'Dashboard\SettingController@addAdministratorHandler');
+        Route::post('destroy-administrator', 'Dashboard\SettingController@destroyAdministratorHandler');
     });
 });

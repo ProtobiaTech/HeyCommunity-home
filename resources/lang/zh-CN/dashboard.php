@@ -31,7 +31,12 @@ return [
     'Timeline Num'                      =>          '公园动态数',
 
     'Edit'                              =>          '编辑',
+    'Add'                               =>          '添加',
+    'Delete'                            =>          '删除',
     'Save'                              =>          '保存',
+    'Search'                            =>          '搜索',
+    'Operations'                        =>          '操作',
+    'Are you sure?'                     =>          '你确定要执行此操作？',
 
     'Community'                         =>          '社区',
     'Community Info'                    =>          '社区信息',
@@ -48,6 +53,12 @@ return [
     'Enabled'                           =>          '启用',
     'TempNotice'                        =>          '模板消息',
     'MP_verify file'                    =>          '微信验证文件',
+
+    'Administrator'                     =>          '管理员',
+    'Add Administrator'                 =>          '添加管理员',
+    'Is Administrator'                  =>          '已是管理员',
+    'Administrator List'                =>          '管理员列表',
+    'ID Or Phone'                       =>          'ID 或 手机号码',
 
     'Getting started'                   =>          '开始',
     'WeChat WebApp'                     =>          '微信 WebApp',

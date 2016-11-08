@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Auth;
+use App\User;
 
 class SettingController extends Controller
 {
@@ -121,5 +122,69 @@ class SettingController extends Controller
     {
         $assign['tenant'] = Auth::user();
         return view('dashboard.setting.edit-wechat-pa', $assign);
+    }
+
+    /**
+     *
+     */
+    public function administrator()
+    {
+        $assign['administrators'] = User::where(['is_admin' => 1])->get();
+        return view('dashboard.setting.administrator', $assign);
+    }
+
+    /**
+     *
+     */
+    public function addAdministrator()
+    {
+        return view('dashboard.setting.add-administrator');
+    }
+
+    /**
+     *
+     */
+    public function searchAdministratorHandler(Request $request)
+    {
+        $this->validate($request, [
+            'id_or_phone'       =>      'min:1',
+        ]);
+
+        $assign = [];
+        if ($request->has('id_or_phone')) {
+            $request->flash();
+            $assign['users'] = User::where(['id' => $request->id_or_phone])->orWhere('phone', '=', $request->id_or_phone)->get();
+        }
+        return view('dashboard.setting.search-administrator', $assign);
+    }
+
+    /**
+     *
+     */
+    public function addAdministratorHandler(Request $request)
+    {
+        $this->validate($request, [
+            'id'                =>      'required|min:1',
+        ]);
+
+        $User = User::findOrFail($request->id);
+        $User->is_admin = true;
+        $User->save();
+        return redirect()->to('/dashboard/setting/administrator');
+    }
+
+    /**
+     *
+     */
+    public function destroyAdministratorHandler(Request $request)
+    {
+        $this->validate($request, [
+            'id'                =>      'required|min:1',
+        ]);
+
+        $User = User::findOrFail($request->id);
+        $User->is_admin = false;
+        $User->save();
+        return redirect()->to('/dashboard/setting/administrator');
     }
 }
