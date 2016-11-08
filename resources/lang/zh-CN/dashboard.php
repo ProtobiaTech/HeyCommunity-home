@@ -18,7 +18,7 @@ return [
     'User'                              =>          '用户',
     'Notice'                            =>          '通知',
 
-    'Author'                            =>          '头像',
+    'Author'                            =>          '作者',
     'Content'                           =>          '内容',
     'Imgs'                              =>          '图片',
     'Like Num'                          =>          '喜欢数',
