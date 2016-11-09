@@ -75,7 +75,7 @@
             </h1>
             <h3>
               适用于 iOS / Android / Windows Phone 等一切手机操作系统 <br><br>
-              更令人惊叹的是，它还能以 WebApp 的形式运行在手机浏览器或 App 内置游览器（如微信）中，输入网址即开即用用完即走，无须安装
+              更令人惊叹的是，它还能以 WebApp 的形式运行在手机浏览器或 App 内置游览器（如微信）中，输入网址即开即用无须安装
             </h3>
             <p class="btn-row">
               <a class="btn btn-primary btn-download desktop-btn" href="#feature" target="_blank">了解 HeyCommunity 功能特性</a>
@@ -94,8 +94,11 @@
           <div class="col-sm-6 fadeIn">
             <h1>强大</h1>
             <h3>
-              先进的混合开发模式，构建在 Angular 和 Ionic 之上 <br><br>
-              丰富的功能组件，满足各种各样的社交方式
+              先进的混合开发模式，构建在 Angular 和 Ionic 之上 <br>
+              易于扩展、快速开发 <br><br>
+
+              丰富的功能组件，满足各种各样的社交方式 <br><br>
+              完整的产品生态，从微信 WebApp 到 iOS / Andorid / Windows Phone App 覆盖主流使用场景
             </h3>
             <p class="btn-row">
               <a class="btn btn-primary btn-download desktop-btn" href="#feature" target="_blank">了解 HeyCommunity 功能特性</a>
@@ -113,8 +116,8 @@
           <div class="col-sm-6 fadeIn">
             <h1>开放</h1>
             <h3>
-              HeyCommunity 遵循GPL v3 开放源代码 <br>
-              你可以基于它构建自己的产品，并且用于商业用途 <br><br>
+              HeyCommunity 遵循 GPLv3 开放源代码 <br>
+              你可以基于它扩展新功能或调整UI，并且用于商业用途 <br><br>
               一切以用户利益为先，得利于我们开放的胸襟
             </h3>
             <p class="btn-row">
@@ -247,7 +250,7 @@
           <h3>通知系统 (Notice)</h3>
         </div>
         <p class="text-center" style="max-width:100%;">
-          用户对你 关注的内容 或 发布内容，点赞、评论等操作后，你将收到相关通知 <br>
+          用户对你关注的内容或发布内容，点赞、评论等操作后，你将收到相关通知 <br>
           当然，通知不仅限于此 <br>
           <br>
         </p>
@@ -284,7 +287,7 @@
       <div class="col-md-4">
         <div class="text-center">
           <i style="font-size:90px; line-height:1em;" class="ion-quote"></i>
-          <h3>话题 (Topic)</h3>
+          <h3>话题 (Topic) <small>开发中</small></h3>
         </div>
         <p class="text-center" style="max-width:100%;">
           在社区里就一个话题进行深入的讨论 <br>
