@@ -82,6 +82,12 @@ return [
     'unique'               => 'The :attribute has already been taken.',
     'url'                  => 'The :attribute format is invalid.',
 
+
+    //
+    //
+    'domain'            =>      'The :attribute format is invalid',
+    'phone'            =>      'The :attribute format is invalid',
+
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Language Lines

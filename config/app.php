@@ -77,7 +77,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'zh-CN',
 
     /*
     |--------------------------------------------------------------------------
@@ -167,6 +167,7 @@ return [
          * Package Service Providers...
          */
         Collective\Html\HtmlServiceProvider::class,
+        HipsterJazzbo\Landlord\LandlordServiceProvider::class,
 
 
         /*
@@ -228,8 +229,9 @@ return [
         /**
          *
          */
-        'Form' => Collective\Html\FormFacade::class,
-        'Html' => Collective\Html\HtmlFacade::class,
+        'Form'      =>  Collective\Html\FormFacade::class,
+        'Html'      =>  Collective\Html\HtmlFacade::class,
+        'Landlord'  =>  HipsterJazzbo\Landlord\Facades\LandlordFacade::class,
     ],
 
 ];

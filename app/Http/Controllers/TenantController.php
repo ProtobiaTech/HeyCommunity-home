@@ -52,24 +52,36 @@ class TenantController extends Controller
      */
     public function signUpHandler(Request $request)
     {
-        $subDomain = $request->sub_domain . '.hey-community.com';
-        $r = $request->merge(['sub_domain' => $subDomain]);
-
         $this->validate($request, [
             'site_name'         =>      'required|min:2|unique:tenants',
-            'domain'            =>      'min:3|unique:tenants',
-            'sub_domain'        =>      'required|min:3|unique:tenants',
+            'domain'            =>      'min:3|domain|unique:tenants',
+            'sub_domain'        =>      'required|min:3',
             'email'             =>      'required|email|unique:tenants',
-            'phone'             =>      'required|min:10000000000|integer|unique:tenants',
+            'phone'             =>      'required|phone|unique:tenants',
             'password'          =>      'required|min:6',
         ]);
+
+        $subDomain = $request->sub_domain . '.hey-community.com';
+        $request->merge(['sub_domain' => $subDomain]);
+        $validator = Validator::make($request->all(), [
+            'sub_domain'        =>      'required|unique:tenants',
+        ]);
+        if ($validator->fails()) {
+            if ($request->ajax()) {
+                return response($validator->errors(), 422);
+            } else {
+                $subDomain = strstr($request->sub_domain, '.hey-community.com', true);
+                $request->merge(['sub_domain' => $subDomain]);
+                return redirect('/sign-up')->withInput()->withErrors($validator);
+            }
+        }
 
         $Tenant = new Tenant();
 
         $Tenant->site_name      =   $request->site_name;
-        $Tenant->sub_domain     =   $request->sub_domain;
+        $Tenant->sub_domain     =   strtolower($request->sub_domain);
         if ($request->domain) {
-            $Tenant->domain     =   $request->domain;
+            $Tenant->domain     =   strtolower($request->domain);
         }
         $Tenant->email          =   $request->email;
         $Tenant->phone          =   $request->phone;
