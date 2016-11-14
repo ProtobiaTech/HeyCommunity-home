@@ -23,7 +23,8 @@ RUN apt-get update \
 ## 安装 node npm bower 等
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash \
 && apt-get install -y nodejs \
-&& npm install -g bower
+&& npm install -g bower \
+&& npm install -g bower-npm-resolver
 
 
 ##
@@ -72,7 +73,7 @@ COPY . /app
 ## 部署 backend
 WORKDIR /app
 RUN composer install
-RUN bower install -F --allow-root
+RUN bower install -F -p --allow-root
 RUN cp .env.example .env \
     && php artisan key:g
 RUN chown -R :www-data . \
