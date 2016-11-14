@@ -20,6 +20,13 @@ RUN apt-get update \
 
 
 ##
+## 安装 node npm bower 等
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash \
+&& apt-get install -y nodejs
+&& npm install -g bower
+
+
+##
 ## 用完包管理器后安排打扫卫生可以显著的减少镜像大小
 RUN apt-get clean \
 && apt-get autoclean \
@@ -65,6 +72,7 @@ COPY . /app
 ## 部署 backend
 WORKDIR /app
 RUN composer install
+RUN bower install -F --allow-root
 RUN cp .env.example .env \
     && php artisan key:g
 RUN chown -R :www-data . \
