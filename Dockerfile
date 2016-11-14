@@ -34,7 +34,7 @@ RUN curl -sS https://getcomposer.org/installer \
 
 ##
 ## Apache 配置
-RUN echo '<Directory /var/www/HeyCommunityHome>\n\
+RUN echo '<Directory /var/www/HeyCommunityHome/public>\n\
     Options Indexes FollowSymLinks\n\
     AllowOverride All\n\
     Require all granted\n\

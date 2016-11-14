@@ -1,0 +1,7 @@
+app:
+  image: daocloud.io/supperod/heycommunity-home
+  volumes:
+    - /data/HeyCommunityHomeStorage:/app
+  ports:
+    - "80"
+  restart: always
