@@ -47,7 +47,7 @@ RUN echo '<Directory /var/www/HeyCommunityHome/public>\n\
     Require all granted\n\
 </Directory>' >> /etc/apache2/apache2.conf
 
-RUN sed -i 's/DocumentRoot \/var\/www\/html/DocumentRoot \/var\/www\/HeyCommunityHome/g' /etc/apache2/sites-enabled/000-default.conf
+RUN sed -i 's/DocumentRoot \/var\/www\/html/DocumentRoot \/var\/www\/HeyCommunityHome\/public/g' /etc/apache2/sites-enabled/000-default.conf
 
 
 ##
